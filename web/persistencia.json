@@ -1,13 +1,138 @@
 [
     {
         "id": 1,
-        "description": "Hacer la tarea 1",
-        "user": "Usuario1"
+        "title": "Hacer la tarea 1",
+        "text": "pues hacer la tarea 1 pero mucho más detallado",
+        "created_by": "Usuario 2",
+        "creation_date": "2023-11-01",
+        "deadline": "2023-11-30",
+        "user": "Usuario 1"
     },
     {
         "id": 2,
-        "description": "Hacer la tarea 2 dde todo",
-        "user": "Usuario2"
+        "title": "Preparar presentación para reunión",
+        "text": "Crear una presentación detallada para la próxima reunión del equipo.",
+        "created_by": "Usuario 1",
+        "creation_date": "2023-11-02",
+        "deadline": "2023-11-15",
+        "user": "Usuario 3"
+    },
+    {
+        "id": 3,
+        "title": "Revisar informe financiero",
+        "text": "Examinar y corregir cualquier error en el informe financiero mensual.",
+        "created_by": "Usuario 4",
+        "creation_date": "2023-11-03",
+        "deadline": "2023-11-10",
+        "user": "Usuario 2"
+    },
+    {
+        "id": 4,
+        "title": "Planificar viaje de negocios",
+        "text": "Organizar detalles y logística para un próximo viaje de negocios.",
+        "created_by": "Usuario 2",
+        "creation_date": "2023-11-04",
+        "deadline": "2023-11-20",
+        "user": "Usuario 5"
+    },
+    {
+        "id": 5,
+        "title": "Actualizar software de la empresa",
+        "text": "Realizar la actualización del software en todos los equipos de la empresa.",
+        "created_by": "Usuario 3",
+        "creation_date": "2023-11-05",
+        "deadline": "2023-11-25",
+        "user": "Usuario 1"
+    },
+    {
+        "id": 6,
+        "title": "Entrenamiento del nuevo empleado",
+        "text": "Proporcionar orientación y formación al nuevo miembro del equipo.",
+        "created_by": "Usuario 1",
+        "creation_date": "2023-11-06",
+        "deadline": "2023-11-18",
+        "user": "Usuario 4"
+    },
+    {
+        "id": 7,
+        "title": "Escribir informe de progreso",
+        "text": "Elaborar un informe detallado sobre el progreso del proyecto actual.",
+        "created_by": "Usuario 5",
+        "creation_date": "2023-11-07",
+        "deadline": "2023-11-12",
+        "user": "Usuario 3"
+    },
+    {
+        "id": 8,
+        "title": "Desarrollar estrategia de marketing",
+        "text": "Crear una estrategia efectiva para la campaña de marketing del próximo trimestre.",
+        "created_by": "Usuario 4",
+        "creation_date": "2023-11-08",
+        "deadline": "2023-11-30",
+        "user": "Usuario 2"
+    },
+    {
+        "id": 9,
+        "title": "Optimizar página web",
+        "text": "Realizar mejoras y optimizaciones en la página web de la empresa.",
+        "created_by": "Usuario 2",
+        "creation_date": "2023-11-09",
+        "deadline": "2023-11-22",
+        "user": "Usuario 1"
+    },
+    {
+        "id": 10,
+        "title": "Entrevistar candidatos",
+        "text": "Conducir entrevistas para la contratación de nuevos empleados.",
+        "created_by": "Usuario 3",
+        "creation_date": "2023-11-10",
+        "deadline": "2023-11-28",
+        "user": "Usuario 5"
+    },
+    {
+        "id": 11,
+        "title": "Organizar evento de empresa",
+        "text": "Planificar y coordinar un evento especial para los empleados de la empresa.",
+        "created_by": "Usuario 5",
+        "creation_date": "2023-11-11",
+        "deadline": "2023-11-17",
+        "user": "Usuario 4"
+    },
+    {
+        "id": 12,
+        "title": "Investigación de mercado",
+        "text": "Realizar un análisis exhaustivo del mercado para identificar oportunidades.",
+        "created_by": "Usuario 4",
+        "creation_date": "2023-11-12",
+        "deadline": "2023-11-26",
+        "user": "Usuario 2"
+    },
+    {
+        "id": 13,
+        "title": "Actualizar políticas de la empresa",
+        "text": "Revisar y actualizar las políticas internas de la empresa según sea necesario.",
+        "created_by": "Usuario 1",
+        "creation_date": "2023-11-13",
+        "deadline": "2023-11-29",
+        "user": "Usuario 3"
+    },
+    {
+        "id": 14,
+        "title": "Organizar capacitación para el equipo",
+        "text": "Programar una sesión de capacitación para mejorar las habilidades del equipo.",
+        "created_by": "Usuario 3",
+        "creation_date": "2023-11-14",
+        "deadline": "2023-11-23",
+        "user": "Usuario 1"
+    },
+    {
+        "id": 15,
+        "title": "Revisar contratos con proveedores",
+        "text": "Evaluar y actualizar los contratos con los proveedores de la empresa.",
+        "created_by": "Usuario 2",
+        "creation_date": "2023-11-15",
+        "deadline": "2023-11-21",
+        "user": "Usuario 4"
     }
-    
 ]
+
