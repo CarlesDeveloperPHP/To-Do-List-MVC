@@ -6,7 +6,8 @@
         "created_by": "Usuario 2",
         "creation_date": "2023-11-01",
         "deadline": "2023-11-30",
-        "user": "Usuario 1"
+        "user": "Usuario 1",
+	"status": "Pending"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "created_by": "Usuario 1",
         "creation_date": "2023-11-02",
         "deadline": "2023-11-15",
-        "user": "Usuario 3"
+        "user": "Usuario 3",
+	"status": "Pending"
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "created_by": "Usuario 4",
         "creation_date": "2023-11-03",
         "deadline": "2023-11-10",
-        "user": "Usuario 2"
+        "user": "Usuario 2",
+	"status": "Pending"
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "created_by": "Usuario 2",
         "creation_date": "2023-11-04",
         "deadline": "2023-11-20",
-        "user": "Usuario 5"
+        "user": "Usuario 5",
+	"status": "Pending"
     },
     {
         "id": 5,
@@ -42,7 +46,9 @@
         "created_by": "Usuario 3",
         "creation_date": "2023-11-05",
         "deadline": "2023-11-25",
-        "user": "Usuario 1"
+        "user": "Usuario 1",
+	"status": "In progress"
+
     },
     {
         "id": 6,
@@ -51,7 +57,9 @@
         "created_by": "Usuario 1",
         "creation_date": "2023-11-06",
         "deadline": "2023-11-18",
-        "user": "Usuario 4"
+        "user": "Usuario 4",
+	"status": "In progress"
+
     },
     {
         "id": 7,
@@ -60,7 +68,9 @@
         "created_by": "Usuario 5",
         "creation_date": "2023-11-07",
         "deadline": "2023-11-12",
-        "user": "Usuario 3"
+        "user": "Usuario 3",
+	"status": "In progress"
+
     },
     {
         "id": 8,
@@ -69,7 +79,9 @@
         "created_by": "Usuario 4",
         "creation_date": "2023-11-08",
         "deadline": "2023-11-30",
-        "user": "Usuario 2"
+        "user": "Usuario 2",
+	"status": "In progress"
+
     },
     {
         "id": 9,
@@ -78,7 +90,9 @@
         "created_by": "Usuario 2",
         "creation_date": "2023-11-09",
         "deadline": "2023-11-22",
-        "user": "Usuario 1"
+        "user": "Usuario 1",
+	"status": "In progress"
+
     },
     {
         "id": 10,
@@ -87,7 +101,9 @@
         "created_by": "Usuario 3",
         "creation_date": "2023-11-10",
         "deadline": "2023-11-28",
-        "user": "Usuario 5"
+        "user": "Usuario 5",
+	"status": "In progress"
+
     },
     {
         "id": 11,
@@ -96,7 +112,9 @@
         "created_by": "Usuario 5",
         "creation_date": "2023-11-11",
         "deadline": "2023-11-17",
-        "user": "Usuario 4"
+        "user": "Usuario 4",
+	"status": "In progress"
+
     },
     {
         "id": 12,
@@ -105,7 +123,9 @@
         "created_by": "Usuario 4",
         "creation_date": "2023-11-12",
         "deadline": "2023-11-26",
-        "user": "Usuario 2"
+        "user": "Usuario 2",
+	"status": "Completed"
+
     },
     {
         "id": 13,
@@ -114,7 +134,9 @@
         "created_by": "Usuario 1",
         "creation_date": "2023-11-13",
         "deadline": "2023-11-29",
-        "user": "Usuario 3"
+        "user": "Usuario 3",
+	"status": "Completed"
+
     },
     {
         "id": 14,
@@ -123,7 +145,9 @@
         "created_by": "Usuario 3",
         "creation_date": "2023-11-14",
         "deadline": "2023-11-23",
-        "user": "Usuario 1"
+        "user": "Usuario 1",
+	"status": "Completed"
+
     },
     {
         "id": 15,
@@ -132,7 +156,9 @@
         "created_by": "Usuario 2",
         "creation_date": "2023-11-15",
         "deadline": "2023-11-21",
-        "user": "Usuario 4"
+        "user": "Usuario 4",
+	"status": "Completed"
+
     }
 ]
 
