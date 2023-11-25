@@ -1,53 +1,57 @@
-<div class="flex my-auto bg-blue-100">
-    <div class="w-3/5 bg-red-500 rounded-md mx-auto p-4">
-        <h2 class="text-2xl font-semibold text-center">CREATE A NEW TASK TASK</h2>
-        <form action="createTask" method="get">
+<div class="flex-grow flex flex-col justify-center items-center">
+    <div class="flex mx-auto w-3/5 flex-grow">
+		<div class="mt-6 mb-auto bg-red-500 rounded-md p-2 h-full w-full">
+            <h2 class="text-2xl font-semibold mb-4 mt-2 text-center">CREATE A NEW TASK TASK</h2>
+            <form action="createTask" method="get">
 
-            <!-- ID: -->
-            <!-- Auto-assigned data in createTaskAction method -->
-                        
-            <!-- Title -->
-            <div class="mb-4 px-2">
-                <label for="title" class="block text-gray-600 font-medium">Task name:</label>
-                <input type="text" id="title" name="title" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500">
-            </div>
-
-            <!-- Text -->
-            <div class="mb-4 px-2">
-                <label for="text" class="block text-gray-600 font-medium">Task details:</label>
-                <textarea id="text" name="text" rows="2" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"></textarea>
-            </div>
-
-            <div class="flex mb-4">
-
-                <!-- Created By -->
-                <div class="w-1/3 px-2">
-                    <label for="createdBy" class="block text-gray-600 font-medium">Created by:</label>
-                    <input type="text" id="createdBy" name="createdBy" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 ml-0">
-                </div>
-
-                <!-- Task assignation -->
-                <div class="w-1/3 px-2">
-                    <label for="user" class="block text-gray-600 font-medium">Task assigned to:</label>
-                    <input type="text" id="user" name="user" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500">
-                </div>
-
-                <!-- Deadline -->
-                <div class="w-1/3 px-2">
-                    <label for="finishDate" class="block text-gray-600 font-medium">Deadline:</label>
-                    <input type="date" id="finishDate" name="finishDate" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500">
-                </div>
-
-                <!-- Status -->
+                <!-- ID: -->
                 <!-- Auto-assigned data in createTaskAction method -->
+                    
+                <!-- Title -->
+                <div class="mb-4 px-2">
+                    <label for="title" class="block text-gray-600 font-medium">Task name:</label>
+                    <input type="text" id="title" name="title" required
+                        class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500">
+                </div>
 
-            </div>
+                <!-- Text -->
+                <div class="mb-4 px-2">
+                    <label for="text" class="block text-gray-600 font-medium">Task details:</label>
+                    <textarea id="text" name="text" rows="2" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+                </div>
 
-            <!-- Submit Button -->
-            <div class="flex justify-center">
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">CREATE</button>
-            </div>
-            
-        </form>
-    <div/>
-<div/>
+                <div class="flex mb-4">
+
+                    <!-- Created By -->
+                    <div class="w-1/3 px-2">
+                        <label for="createdBy" class="block text-gray-600 font-medium">Created by:</label>
+                        <input type="text" id="createdBy" name="createdBy" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 ml-0">
+                    </div>
+
+                    <!-- Task assignation -->
+                    <div class="w-1/3 px-2">
+                        <label for="user" class="block text-gray-600 font-medium">Task assigned to:</label>
+                            <input type="text" id="user" name="user" required
+                                class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <!-- Deadline -->
+                    <div class="w-1/3 px-2">
+                        <label for="finishDate" class="block text-gray-600 font-medium">Deadline:</label>
+                        <input type="date" id="finishDate" name="finishDate" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <!-- Status -->
+                    <!-- Auto-assigned data in createTaskAction method -->
+
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">CREATE</button>
+                </div>
+
+            </form>
+        </div>
+	</div>
+</div>
