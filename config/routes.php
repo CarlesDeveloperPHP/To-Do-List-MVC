@@ -11,5 +11,6 @@
  */
 $routes = array(
 	'/test' => 'test#index',
-	'/getinsertform'	=>  'application#getViewInsertForm'
+	'/getinsertform'	=>  'application#getViewInsertForm',
+	'/createTask'		=>  'application#createTask'
 );
