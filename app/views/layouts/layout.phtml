@@ -5,12 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TO DO LIST</title>
+	<link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/stylesheets/styles.css">
 	<script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
-<body class="bg-white min-h-screen flex flex-col ">
-
+<body class="min-h-screen flex flex-col ">
 
 	<header class="bg-orange-500 p-4 flex items-center justify-center w-full">
 				<div class="flex-shrink-0 w-auto">
@@ -21,18 +21,15 @@
 				</div>
 	</header>
 
-	<div>
+	<!--<div>
 		<a href="<?php echo WEB_ROOT . "/getinsertform"?>" class="text-black">Insertar</a>
+	</div>-->
 
-	</div>
+	<main class="flex-grow">
+    	<?= $this->content() ?>		
+  	</main>
 
-	<main class="flex">
-		<div class="flex mx-auto">
-			<div class="mt-4"><?= $this->content() ?></div>
-		</div>
-	</main>
-
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <p class="text-white mt-2">App created by</p>
         <div class="flex items-center justify-center mt-2">
             <a href="https://www.linkedin.com/in/carles-ruiz-montejo-tecnico-de-campo-especialista" class="flex items-center text-white text-lg mx-5">

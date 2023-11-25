@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Playpen';
+    /*src: url('http://localhost/To-Do-List-MVC/web/fonts/Playpen_Sans/static/PlaypenSans-Medium.ttf');*/
+    src: url('../fonts/Playpen/static/PlaypenSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Patrick';
+    src: url('../fonts/Patrick/PatrickHandSC-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Borel';
+    src: url('../fonts/Borel/Borel-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Londrina';
+    src: url('../fonts/Londrina/LondrinaSolid-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/RubikMonoOne-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('../fonts/Caveat/static/Caveat-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    font-family: Rubik;
+}
+
+main {
+    font-family: Playpen;
+}
+
