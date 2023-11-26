@@ -30,7 +30,8 @@ class ApplicationController extends Controller
             $jsonContent = file_get_contents('../db/dataBase.json');
 
             // Decode the JSON file into a Task objects array   
-            $tasks = json_decode($jsonContent);
+            $tasks = json_decode($jsonContent, true, 512, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
 
             // Create a new Task object with the data to insert
             $newTask = new TaskModel(
@@ -45,7 +46,8 @@ class ApplicationController extends Controller
             $tasks[] = $newTask;
 
             // Encode Task objects array back to JSON
-            $newJsonContent = json_encode($tasks, JSON_PRETTY_PRINT);
+            $newJsonContent = json_encode($tasks, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
 
             // Write the new content intoto the JSON file
             file_put_contents('../db/dataBase.json', $newJsonContent);
