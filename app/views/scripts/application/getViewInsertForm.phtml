@@ -35,7 +35,7 @@
                 <!-- Deadline -->
                 <div class="w-1/3 px-2">
                     <label for="task_deadline_id" class="block text-orange-600 font-medium">Deadline:</label>
-                    <input type="date" id="task_deadline_id" name="task_deadline" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                    <input type="date" id="task_deadline_id" name="task_deadline" required min="<?php echo date('Y-m-d'); ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
                 </div>
 
                 <!-- Status -->
