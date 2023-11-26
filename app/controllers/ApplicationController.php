@@ -54,11 +54,16 @@ class ApplicationController extends Controller
             file_put_contents('../db/dataBase.json', $newJsonContent);
 
             // Success message;
-            $this->view->message = "New task created successfully";
+            $this->view->message = "New task created successfully!!";
+            $this->view->txtColor = "text-green-500";
+
 
         } else {
             // Error message;
             $this->view->message = "Error: new task could not be created";
+            //$this->view->txtColor = "text-red-900";
+            $this->view->txtColor = "text-red-500";
+
         }
 
     }
