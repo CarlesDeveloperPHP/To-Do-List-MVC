@@ -12,59 +12,35 @@ class ApplicationController extends Controller
 {
 
 	public function getViewInsertFormAction()
-        {   
-        }
+    {   
+    }
 
     public function createTaskAction()
     {
-
-        if (isset($_GET) && !empty($_GET)) {
-            
+        if (isset($_POST) && !empty($_POST)) {
+                
             // Array where store data collected from the new task creation form
             $newTaskData = array(
-                    "task_name" => $_GET["task_name"],
-                    "task_details" => $_GET["task_details"],
-                    "task_created_by" => $_GET["task_created_by"],
-                    "task_deadline" => $_GET["task_deadline"],
-                    "task_assigned_to" => $_GET["task_assigned_to"],
+                        "task_id"=> uniqid(),
+                        "task_name" => $_POST["task_name"],
+                        "task_details" => $_POST["task_details"],
+                        "task_created_by" => $_POST["task_created_by"],
+                        "task_creation_date" => date('Y-m-d'),
+                        "task_deadline" => $_POST["task_deadline"],
+                        "task_assigned_to" => $_POST["task_assigned_to"],
+                        "task_status" => "Pending"
             );
-            
-            // Read the current content of the JSON file
-            $jsonContent = file_get_contents('../db/dataBase.json');
-
-            // Decode the JSON file into a Task objects array   
-            $tasks = json_decode($jsonContent, true, 512, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-
-            // Create a new Task object with the data to insert
-            $newTask = new TaskModel(
-                    $newTaskData["task_name"],
-                    $newTaskData["task_details"],
-                    $newTaskData["task_created_by"],
-                    $newTaskData["task_deadline"],
-                    $newTaskData["task_assigned_to"],
-            );
-
-            // Add new Task object into the array
-            $tasks[] = $newTask;
-
-            // Encode Task objects array back to JSON
-            $newJsonContent = json_encode($tasks, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-
-            // Write the new content intoto the JSON file
-            file_put_contents('../db/dataBase.json', $newJsonContent);
-
+                
+            $taskModel = new TaskModel();
+            $taskModel->createTask($newTaskData);
             // Success message;
             $this->view->message = "New task created successfully!!";
             $this->view->txtColor = "text-green-500";
-
-
-        } else {
+        }
+        else{
             // Error message;
             $this->view->message = "Error: new task could not be created";
-            //$this->view->txtColor = "text-red-900";
             $this->view->txtColor = "text-red-500";
-
         }
-
     }
 }

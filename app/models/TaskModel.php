@@ -1,26 +1,42 @@
 <?php
 
-    class TaskModel    {
-        public $task_id;
-        public $task_name;
-        public $task_details;
-        public $task_created_by;
-        public $task_creation_date;
-        public $task_deadline;
-        public $task_assigned_to;
-        public $task_status;
+    class TaskModel
+    {
+        protected $tasks = [];
+        protected $jsonPath;
 
-        public function __construct($task_name, $task_details, $task_created_by, $task_deadline, $task_assigned_to)
+        public function __construct()
         {
-            $this->task_id = uniqid(); // Automatically generated id
-            $this->task_name = $task_name;
-            $this->task_details = $task_details;
-            $this->task_created_by = $task_created_by;
-            $this->task_creation_date =  date('Y-m-d'); // Automatically generated date
-            $this->task_deadline = $task_deadline;
-            $this->task_assigned_to = $task_assigned_to;
-            $this->task_status = "Pending"; // A new task is allways created as pending
+            $this->jsonPath = ROOT_PATH . '/db/dataBase.json';// where JSON file is
         }
+
+        public function getAllTasks()
+        {
+            // $data= file_get_contents('/..app/models/persistencia/DDBB.json') ;
+            $data = file_get_contents($this->jsonPath);
+            // The second argument 'true' indicates that an associative array should be returned instead of an object.
+            $tasks = json_decode($data, true);
+            return $tasks;
+        }
+
+        public function createTask($newTaskData)
+        {            
+            // Read the current content of the JSON file
+            $jsonContent = file_get_contents($this->jsonPath);
+
+            // Decode the JSON file into a Task objects array   
+            $tasks = json_decode($jsonContent, true, 512, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
+            // Add new Task object into the array
+            $tasks[] = $newTaskData;
+
+            // Encode Task objects array back to JSON
+            $newJsonContent = json_encode($tasks, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+            // Write the new content intoto the JSON file
+            file_put_contents('../db/dataBase.json', $newJsonContent);
+        }
+        
     }
 
 ?>
