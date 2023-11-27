@@ -25,7 +25,7 @@
             $jsonContent = file_get_contents($this->jsonPath);
 
             // Decode the JSON file into a Task objects array   
-            $tasks = json_decode($jsonContent, true, 512, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            $tasks = json_decode($jsonContent, true, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
             // Add new Task object into the array
             $tasks[] = $newTaskData;
