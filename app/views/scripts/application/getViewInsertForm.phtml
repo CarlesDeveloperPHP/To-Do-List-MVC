@@ -35,6 +35,12 @@
                     <input type="text" id="task_assignation_id" name="task_assigned_to" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
                 </div>
 
+                <!-- Start date -->
+                <div class="w-1/3 px-2">
+                    <label for="task_startDate_id" class="block text-orange-600 font-medium">Start date:</label>
+                    <input type="date" id="task_startDate_id" name="task_startDate" required min="<?php echo date('Y-m-d'); ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                </div>
+
                 <!-- Deadline -->
                 <div class="w-1/3 px-2">
                     <label for="task_deadline_id" class="block text-orange-600 font-medium">Deadline:</label>
