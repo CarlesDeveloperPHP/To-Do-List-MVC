@@ -1,164 +1,210 @@
 [
+    
     {
-        "id": 1,
-        "title": "Hacer la tarea 1",
-        "text": "pues hacer la tarea 1 pero mucho más detallado",
-        "created_by": "Usuario 2",
-        "creation_date": "2023-11-01",
-        "deadline": "2023-11-30",
-        "user": "Usuario 1",
-	"status": "Pending"
+        "task_id": 1,
+        "task_name": "Complete Task 1",
+        "task_details": "Implement user authentication in MVC project.",
+        "task_created_by": "John Smith",
+        "task_creation_date": "2023-08-15",
+        "task_deadline": "2023-09-10",
+        "task_assigned_to": "David Johnson",
+        "task_status": "Pending"
     },
     {
-        "id": 2,
-        "title": "Preparar presentación para reunión",
-        "text": "Crear una presentación detallada para la próxima reunión del equipo.",
-        "created_by": "Usuario 1",
-        "creation_date": "2023-11-02",
-        "deadline": "2023-11-15",
-        "user": "Usuario 3",
-	"status": "Pending"
+        "task_id": 2,
+        "task_name": "Fix Bug in Controller",
+        "task_details": "Debug and fix the issue in the MVC controller.",
+        "task_created_by": "Emma Davis",
+        "task_creation_date": "2023-07-22",
+        "task_deadline": "2023-08-05",
+        "task_assigned_to": "Brian Wilson",
+        "task_status": "Completed"
     },
     {
-        "id": 3,
-        "title": "Revisar informe financiero",
-        "text": "Examinar y corregir cualquier error en el informe financiero mensual.",
-        "created_by": "Usuario 4",
-        "creation_date": "2023-11-03",
-        "deadline": "2023-11-10",
-        "user": "Usuario 2",
-	"status": "Pending"
+        "task_id": 3,
+        "task_name": "Optimize Database Queries",
+        "task_details": "Improve database query performance for the MVC project.",
+        "task_created_by": "Sophia Moore",
+        "task_creation_date": "2023-10-05",
+        "task_deadline": "2023-11-02",
+        "task_assigned_to": "Ethan Taylor",
+        "task_status": "In Progress"
     },
     {
-        "id": 4,
-        "title": "Planificar viaje de negocios",
-        "text": "Organizar detalles y logística para un próximo viaje de negocios.",
-        "created_by": "Usuario 2",
-        "creation_date": "2023-11-04",
-        "deadline": "2023-11-20",
-        "user": "Usuario 5",
-	"status": "Pending"
+        "task_id": 4,
+        "task_name": "Refactor View Components",
+        "task_details": "Refactor and optimize view components in the MVC project.",
+        "task_created_by": "Aiden Turner",
+        "task_creation_date": "2023-05-12",
+        "task_deadline": "2023-06-01",
+        "task_assigned_to": "Olivia Brown",
+        "task_status": "Pending"
     },
     {
-        "id": 5,
-        "title": "Actualizar software de la empresa",
-        "text": "Realizar la actualización del software en todos los equipos de la empresa.",
-        "created_by": "Usuario 3",
-        "creation_date": "2023-11-05",
-        "deadline": "2023-11-25",
-        "user": "Usuario 1",
-	"status": "In progress"
-
+        "task_id": 5,
+        "task_name": "Implement New Feature",
+        "task_details": "Add a new feature to the MVC project according to specifications.",
+        "task_created_by": "Mia Robinson",
+        "task_creation_date": "2023-03-20",
+        "task_deadline": "2023-04-15",
+        "task_assigned_to": "Noah Miller",
+        "task_status": "Completed"
     },
     {
-        "id": 6,
-        "title": "Entrenamiento del nuevo empleado",
-        "text": "Proporcionar orientación y formación al nuevo miembro del equipo.",
-        "created_by": "Usuario 1",
-        "creation_date": "2023-11-06",
-        "deadline": "2023-11-18",
-        "user": "Usuario 4",
-	"status": "In progress"
-
+        "task_id": 6,
+        "task_name": "Test and Debug",
+        "task_details": "Conduct thorough testing and debugging for the MVC application.",
+        "task_created_by": "Liam White",
+        "task_creation_date": "2023-09-02",
+        "task_deadline": "2023-09-20",
+        "task_assigned_to": "Ava Turner",
+        "task_status": "In Progress"
     },
     {
-        "id": 7,
-        "title": "Escribir informe de progreso",
-        "text": "Elaborar un informe detallado sobre el progreso del proyecto actual.",
-        "created_by": "Usuario 5",
-        "creation_date": "2023-11-07",
-        "deadline": "2023-11-12",
-        "user": "Usuario 3",
-	"status": "In progress"
-
+        "task_id": 7,
+        "task_name": "Write Documentation",
+        "task_details": "Create comprehensive documentation for the MVC project.",
+        "task_created_by": "Harper Harris",
+        "task_creation_date": "2023-01-10",
+        "task_deadline": "2023-01-31",
+        "task_assigned_to": "Jackson Smith",
+        "task_status": "Pending"
     },
     {
-        "id": 8,
-        "title": "Desarrollar estrategia de marketing",
-        "text": "Crear una estrategia efectiva para la campaña de marketing del próximo trimestre.",
-        "created_by": "Usuario 4",
-        "creation_date": "2023-11-08",
-        "deadline": "2023-11-30",
-        "user": "Usuario 2",
-	"status": "In progress"
-
+        "task_id": 8,
+        "task_name": "Code Review",
+        "task_details": "Perform a thorough code review for the MVC project.",
+        "task_created_by": "Lucas Lewis",
+        "task_creation_date": "2023-06-28",
+        "task_deadline": "2023-07-15",
+        "task_assigned_to": "Ella Martin",
+        "task_status": "Completed"
     },
     {
-        "id": 9,
-        "title": "Optimizar página web",
-        "text": "Realizar mejoras y optimizaciones en la página web de la empresa.",
-        "created_by": "Usuario 2",
-        "creation_date": "2023-11-09",
-        "deadline": "2023-11-22",
-        "user": "Usuario 1",
-	"status": "In progress"
-
+        "task_id": 9,
+        "task_name": "Deploy to Production",
+        "task_details": "Coordinate and execute the deployment of the MVC application to production.",
+        "task_created_by": "Lily Moore",
+        "task_creation_date": "2023-04-18",
+        "task_deadline": "2023-05-10",
+        "task_assigned_to": "Logan Davis",
+        "task_status": "In Progress"
     },
     {
-        "id": 10,
-        "title": "Entrevistar candidatos",
-        "text": "Conducir entrevistas para la contratación de nuevos empleados.",
-        "created_by": "Usuario 3",
-        "creation_date": "2023-11-10",
-        "deadline": "2023-11-28",
-        "user": "Usuario 5",
-	"status": "In progress"
-
+        "task_id": 10,
+        "task_name": "Security Audit",
+        "task_details": "Conduct a security audit for the MVC project and address any vulnerabilities.",
+        "task_created_by": "Leo Turner",
+        "task_creation_date": "2023-11-20",
+        "task_deadline": "2023-12-15",
+        "task_assigned_to": "Aria Wilson",
+        "task_status": "Pending"
     },
     {
-        "id": 11,
-        "title": "Organizar evento de empresa",
-        "text": "Planificar y coordinar un evento especial para los empleados de la empresa.",
-        "created_by": "Usuario 5",
-        "creation_date": "2023-11-11",
-        "deadline": "2023-11-17",
-        "user": "Usuario 4",
-	"status": "In progress"
-
+        "task_id": 11,
+        "task_name": "Performance Testing",
+        "task_details": "Perform performance testing for the MVC application.",
+        "task_created_by": "Isaac White",
+        "task_creation_date": "2023-02-08",
+        "task_deadline": "2023-03-01",
+        "task_assigned_to": "Evelyn Robinson",
+        "task_status": "Completed"
     },
     {
-        "id": 12,
-        "title": "Investigación de mercado",
-        "text": "Realizar un análisis exhaustivo del mercado para identificar oportunidades.",
-        "created_by": "Usuario 4",
-        "creation_date": "2023-11-12",
-        "deadline": "2023-11-26",
-        "user": "Usuario 2",
-	"status": "Completed"
-
+        "task_id": 12,
+        "task_name": "User Interface Enhancement",
+        "task_details": "Enhance the user interface of the MVC project based on user feedback.",
+        "task_created_by": "Elijah Harris",
+        "task_creation_date": "2023-08-02",
+        "task_deadline": "2023-08-20",
+        "task_assigned_to": "Sophie Taylor",
+        "task_status": "In Progress"
     },
     {
-        "id": 13,
-        "title": "Actualizar políticas de la empresa",
-        "text": "Revisar y actualizar las políticas internas de la empresa según sea necesario.",
-        "created_by": "Usuario 1",
-        "creation_date": "2023-11-13",
-        "deadline": "2023-11-29",
-        "user": "Usuario 3",
-	"status": "Completed"
-
+        "task_id": 13,
+        "task_name": "Localization Support",
+        "task_details": "Add localization support to the MVC application for multiple languages.",
+        "task_created_by": "Aiden Davis",
+        "task_creation_date": "2023-07-10",
+        "task_deadline": "2023-07-31",
+        "task_assigned_to": "Lily Harris",
+        "task_status": "Pending"
     },
     {
-        "id": 14,
-        "title": "Organizar capacitación para el equipo",
-        "text": "Programar una sesión de capacitación para mejorar las habilidades del equipo.",
-        "created_by": "Usuario 3",
-        "creation_date": "2023-11-14",
-        "deadline": "2023-11-23",
-        "user": "Usuario 1",
-	"status": "Completed"
-
+        "task_id": 14,
+        "task_name": "Integration Testing",
+        "task_details": "Perform integration testing for the MVC project components.",
+        "task_created_by": "Jackson Turner",
+        "task_creation_date": "2023-05-25",
+        "task_deadline": "2023-06-10",
+        "task_assigned_to": "Mila Robinson",
+        "task_status": "Completed"
     },
     {
-        "id": 15,
-        "title": "Revisar contratos con proveedores",
-        "text": "Evaluar y actualizar los contratos con los proveedores de la empresa.",
-        "created_by": "Usuario 2",
-        "creation_date": "2023-11-15",
-        "deadline": "2023-11-21",
-        "user": "Usuario 4",
-	"status": "Completed"
-
+        "task_id": 15,
+        "task_name": "Code Refactoring",
+        "task_details": "Refactor the codebase of the MVC application for better maintainability.",
+        "task_created_by": "Oliver White",
+        "task_creation_date": "2023-10-12",
+        "task_deadline": "2023-11-01",
+        "task_assigned_to": "James Martin",
+        "task_status": "In Progress"
+    },
+    {
+        "task_id": 16,
+        "task_name": "Error Handling Improvement",
+        "task_details": "Improve error handling mechanisms in the MVC project.",
+        "task_created_by": "Aria Harris",
+        "task_creation_date": "2023-03-15",
+        "task_deadline": "2023-04-05",
+        "task_assigned_to": "Ethan Robinson",
+        "task_status": "Pending"
+    },
+    {
+        "task_id": 17,
+        "task_name": "Cross-Browser Compatibility",
+        "task_details": "Ensure cross-browser compatibility for the MVC application.",
+        "task_created_by": "Liam Davis",
+        "task_creation_date": "2023-09-18",
+        "task_deadline": "2023-10-10",
+        "task_assigned_to": "Ella Harris",
+        "task_status": "Completed"
+    },
+    {
+        "task_id": 18,
+        "task_name": "Feature Testing",
+        "task_details": "Conduct thorough testing of newly implemented features in the MVC project.",
+        "task_created_by": "Noah Turner",
+        "task_creation_date": "2023-06-05",
+        "task_deadline": "2023-06-25",
+        "task_assigned_to": "Ava Wilson",
+        "task_status": "In Progress"
+    },
+    {
+        "task_id": 19,
+        "task_name": "Documentation Update",
+        "task_details": "Update documentation to reflect recent changes in the MVC project.",
+        "task_created_by": "Mia Taylor",
+        "task_creation_date": "2023-01-28",
+        "task_deadline": "2023-02-15",
+        "task_assigned_to": "Logan Harris",
+        "task_status": "Pending"
+    },
+    {
+        "task_id": 20,
+        "task_name": "Feature Enhancement",
+        "task_details": "Enhance existing features of the MVC application based on user feedback.",
+        "task_created_by": "Elijah Turner",
+        "task_creation_date": "2023-04-05",
+        "task_deadline": "2023-04-25",
+        "task_assigned_to": "Sophie Robinson",
+        "task_status": "Completed"
     }
 ]
+    
+
+
+
+
+
 
