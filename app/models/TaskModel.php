@@ -1,14 +1,25 @@
 <?php
 
-    class TaskModel
-    {
-        protected $tasks = [];
-        protected $jsonPath;
+class TaskModel
+{
 
-        public function __construct()
-        {
-            $this->jsonPath = ROOT_PATH . '/db/dataBase.json';// where JSON file is
-        }
+    protected $tasks = [];
+    protected $jsonPath;
+
+
+    public function __construct()
+    {
+
+        $this->jsonPath = ROOT_PATH . '/db/dataBase.json';// donde está el JSON
+    }
+
+
+    
+    public function editTask()
+    {
+        echo "aqui funcion  clase task";
+    }
+}
 
         public function getAllTasks()
         {

@@ -10,6 +10,24 @@
 
 class ApplicationController extends Controller 
 {
+    public function getAllTasksAction()
+    {
+
+        $allTasks = [];
+
+        $dataJson = new TaskModel();
+
+        $this->view->allTasks = $dataJson->getAllTasks();
+
+        return $allTasks;
+    }	
+
+    public function editTaskAction()
+    {
+        echo "edit!!!!!!!";
+        
+        
+    }
 
 	public function getViewInsertFormAction()
     {   
