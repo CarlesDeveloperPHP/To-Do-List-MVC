@@ -67,4 +67,34 @@ class ApplicationController extends Controller
             $this->view->txtColor = "text-red-500";
         }
     }
+
+    public function getViewPreDeleteAction()
+    {
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        $taskModel = new TaskModel();
+        $task = $taskModel->getTaskById($task_id);
+        if (isset($task) && is_array($task)) {
+            $this->view->task_id = $task["task_id"];
+            $this->view->message = "You are about to delete the task: " . $task["task_name"];
+            $this->view->buttonText="No way!!";
+            $this->view->txtColor = "text-lime-600";
+        } else {
+            $this->view->message = "$task";
+            $this->view->buttonText="Show all tasks";
+            $this->view->txtColor = "text-red-600";
+        }
+       
+    }
+
+    public function deleteTaskAction()
+    {
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        $taskModel = new TaskModel();
+        $taskModel->deleteTask($task_id);
+        $this->view->message = "The task has been deleted sucessfully!!";
+        $this->view->txtColor = "text-green-600";
+    }
+
 }
