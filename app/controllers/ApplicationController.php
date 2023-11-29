@@ -84,10 +84,9 @@ class ApplicationController extends Controller
             $this->view->buttonText="Show all tasks";
             $this->view->txtColor = "text-red-600";
         }
-       
     }
 
-    public function deleteTaskAction()
+/*    public function deleteTaskAction()
     {
         $parameters = $this->_namedParameters;
         $task_id = $parameters["id"];
@@ -95,6 +94,25 @@ class ApplicationController extends Controller
         $taskModel->deleteTask($task_id);
         $this->view->message = "The task has been deleted sucessfully!!";
         $this->view->txtColor = "text-green-600";
+    }
+*/
+
+    public function deleteTaskAction()
+    {
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        $taskModel = new TaskModel();
+        $isDeleted = $taskModel->deleteTask($task_id);
+        if ($isDeleted!=true) {
+            $this->view->message = "Task not found";
+            $this->view->buttonText="Create a new task";
+            $this->view->txtColor = "text-red-600";
+        } else {
+            $this->view->message = "The task has been deleted successfully";
+            $this->view->buttonText="Show all tasks";
+            $this->view->txtColor = "text-lime-600";
+        }
+       
     }
 
 }
