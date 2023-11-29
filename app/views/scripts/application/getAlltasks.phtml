@@ -71,7 +71,8 @@ if (isset($allTasks)) : ?>
                 <label class="w-2/5 text-center"><strong>Deadline:</strong> <?php echo($task['task_deadline']); ?></label>
                 <input class="w-1/5 ml-40 text-center" value="<?php echo($task['task_status']); ?>"></input>
                 <button class="text-green-500 ml-20 text-lg scale-125"><i class="fas fa-edit"></i></button>
-                <button class="text-red-500 ml-20 text-lg scale-125"><i class="fas fa-trash"></i></button>
+                <button class="text-red-500 ml-20 text-lg scale-125"><a href="<?php echo WEB_ROOT . "/getViewPreDelete/" . $task['task_id']; ?>"><i class="fas fa-trash"></i></a></button>
+
             </div>
         </div>
     </div>
@@ -88,6 +89,7 @@ if (isset($allTasks)) : ?>
     <p>No hay datos a mostrar.</p>
 <?php endif; ?>
 </div>
+
 <script>
 
 </script>
