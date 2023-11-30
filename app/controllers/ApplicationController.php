@@ -12,7 +12,7 @@ class ApplicationController extends Controller
 {
     public function getAllTasksAction()
     {
-
+    
         $allTasks = [];
 
         $dataJson = new TaskModel();
@@ -24,9 +24,7 @@ class ApplicationController extends Controller
 
     public function editTaskAction()
     {
-        echo "edit!!!!!!!";
-        
-        
+        echo "edit!!!!!!!"; 
     }
 
 	public function getViewInsertFormAction()
@@ -36,9 +34,9 @@ class ApplicationController extends Controller
     public function createTaskAction()
     {
         if (isset($_POST) && !empty($_POST)) {
-            
+            // Starting data not greater than Deadline validation
             if ($_POST["task_deadline"] < $_POST["task_startDate"]) {
-                $this->view->message = "Deadline cannot be greater than the Start date!!";
+                $this->view->message = "Start date cannot be greater than the Deadline!!";
                 $this->view->txtColor = "text-red-500";
             }
             else{
@@ -53,12 +51,12 @@ class ApplicationController extends Controller
                 "task_assigned_to" => $_POST["task_assigned_to"],
                 "task_status" => "Pending"
                 );
-            
-            $taskModel = new TaskModel();
-            $taskModel->createTask($newTaskData);
-            // Success message;
-            $this->view->message = "New task created successfully!!";
-            $this->view->txtColor = "text-green-500";
+                // Model call to insert the newTaskData into the json file
+                $taskModel = new TaskModel();
+                $taskModel->createTask($newTaskData);
+                // Success message;
+                $this->view->message = "New task created successfully!!";
+                $this->view->txtColor = "text-green-500";
             }
         }
         else{
@@ -67,4 +65,47 @@ class ApplicationController extends Controller
             $this->view->txtColor = "text-red-500";
         }
     }
+
+    public function getViewPreDeleteAction()
+    {
+        // Getting the task_id
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        // Model call to get the taskData array that will be deleted from the json file
+        $taskModel = new TaskModel();
+        $task = $taskModel->getTaskById($task_id);
+        // Definition of getViewPreDelete.phtml script parameters
+        if (isset($task) && is_array($task)) {
+            $this->view->task_id = $task["task_id"];
+            $this->view->message = "You are about to delete the task: " . $task["task_name"];
+            $this->view->buttonText="No way!!";
+            $this->view->txtColor = "text-lime-600";
+        } else {
+            $this->view->message = "$task";
+            $this->view->buttonText="Show all tasks";
+            $this->view->txtColor = "text-red-600";
+        }
+    }
+
+    public function deleteTaskAction()
+    {
+        // Getting the task_id
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        // Model call to execute the deletion of the task from the json file
+        $taskModel = new TaskModel();
+        $isDeleted = $taskModel->deleteTask($task_id);
+        // Definition of deleteTask.phtml script parameters
+        if ($isDeleted!=true) {
+            $this->view->message = "Task not found";
+            $this->view->buttonText="Create a new task";
+            $this->view->txtColor = "text-red-600";
+        } else {
+            $this->view->message = "The task has been deleted successfully";
+            $this->view->buttonText="Show all tasks";
+            $this->view->txtColor = "text-lime-600";
+        }
+       
+    }
+
 }
