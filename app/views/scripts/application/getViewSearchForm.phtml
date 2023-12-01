@@ -1,0 +1,59 @@
+
+<!-- This script is responsible for generating the task search form -->
+
+<div class="flex my-auto">
+    <div class="w-3/5 mx-auto p-4">
+        <h2 class="text-2xl font-semibold text-center text-orange-400">SEARCH TASK</h2>
+        <form action="createTask" method="post" class="text-orange-400" autocomplete="off">
+                            
+            <!-- Task name -->
+            <div class="mb-4 px-2">
+                <label for="task_name_id" class="block text-orange-600 font-medium">Task name:</label>
+                <input type="text" id="task_name_id" name="task_name" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+            </div>
+
+            <!-- Text -->
+            <div class="mb-4 px-2">
+                <label for="task_details_id" class="block text-orange-600 font-medium">Task details:</label>
+                <textarea id="task_details_id" name="task_details" rows="2" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500"></textarea>
+            </div>
+
+            <div class="flex mb-4">
+
+                <!-- Created By -->
+                <div class="w-1/3 px-2">
+                    <label for="task_creation_id" class="block text-orange-600 font-medium">Created by:</label>
+                    <input type="text" id="task_creation_id" name="task_created_by" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500 ml-0">
+                </div>
+
+                <!-- Task assignation -->
+                <div class="w-1/3 px-2">
+                    <label for="task_assignation_id" class="block text-orange-600 font-medium">Task assigned to:</label>
+                    <input type="text" id="task_assignation_id" name="task_assigned_to" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                </div>
+
+                <!-- Start date -->
+                <div class="w-1/3 px-2">
+                    <label for="task_startDate_id" class="block text-orange-600 font-medium">Start date:</label>
+                    <input type="date" id="task_startDate_id" name="task_startDate" required min="<?php echo date('Y-m-d'); ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                </div>
+
+                <!-- Deadline -->
+                <div class="w-1/3 px-2">
+                    <label for="task_deadline_id" class="block text-orange-600 font-medium">Deadline:</label>
+                    <input type="date" id="task_deadline_id" name="task_deadline" required min="<?php echo date('Y-m-d'); ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                </div>
+
+                <!-- Status -->
+                <!-- Auto-assigned data in createTaskAction method -->
+
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+                <button type="submit" class="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-lime-500">Save task</button>
+            </div>
+
+        </form>
+    <div/>
+<div/>
