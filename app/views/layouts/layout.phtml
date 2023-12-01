@@ -14,26 +14,19 @@
 
 <body class="min-h-screen flex flex-col ">
 
-	<header class="bg-orange-500 p-1 flex items-center justify-between w-full fixed top-0 z-50">
+	<header class="bg-orange-500 p-1 flex items-center justify-center w-full fixed top-0 z-50">
 		<!-- Title -->
-		<div class="flex-shrink-0 ml-2">
+		<div class="flex-shrink-0 mr-10">
 			<a href="<?php echo WEB_ROOT?>">
 				<img src="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/images/todolisticon.png" alt="todolist_icon" class="w-15 h-13">
 			</a>
 		</div>
 		<!-- Navigation -->
-		<div class="w-3/4 p-2 flex justify-between items-center text-sm">
-			<!-- Main action: create task -->
+		<div class="w-2/7 p-2 ml-10 flex justify-end items-center text-sm">
+			<!-- Create task -->
     		<a href="<?php echo WEB_ROOT . "/getinsertform"?>" class="mx-2 bg-lime-300 hover:bg-lime-400 py-2 px-4 rounded"><button>CREATE TASK</button></a>
-    		<!-- Search actions -->
-			<div class="flex bg-orange-400 p-2 rounded">
-				<div class="flex items-center mr-3 ml-2 text-base">Search options</div>
-				<a href="#" class="mx-2 bg-white py-2 px-4 rounded"><button>Created by</button></a>
-				<a href="#" class="mx-2 bg-white py-2 px-4 rounded"><button>Assigned to</button></a>
-				<a href="#" class="mx-2 bg-white py-2 px-4 rounded"><button>Status</button></a>
-				<a href="#" class="mx-2 bg-white py-2 px-4 rounded"><button>Start date</button></a>
-				<a href="#" class="mx-2 bg-white py-2 px-4 rounded"><button>Deadline</button></a>
-			</div>
+    		<!-- Search TASK -->
+			<a href="<?php echo WEB_ROOT . "/getinsertform"?>" class="mx-2 bg-lime-300 hover:bg-lime-400 py-2 px-4 rounded"><button>SEARCH TASK</button></a>
 		</div>
 	</header>
 
