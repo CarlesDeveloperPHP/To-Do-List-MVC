@@ -14,7 +14,7 @@
 
 <body class="min-h-screen flex flex-col ">
 
-	<header class="bg-orange-500 p-2 flex items-center justify-center w-full">
+	<header class="bg-orange-500 p-2 flex items-center justify-center w-full fixed top-0 z-50">
 		<div class="flex-shrink-0">
 			<a href="<?php echo WEB_ROOT?>">
 				<img src="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/images/todolisticon.png" alt="todolist_icon" class="w-15 h-13">
@@ -22,11 +22,7 @@
 		</div>
 	</header>
 
-	<!--<div>
-		<a href="<?php echo WEB_ROOT . "/getinsertform"?>" class="text-black">Insertar</a>
-	</div>-->
-
-	<main class="flex-grow flex flex-col h-full">
+	<main class="flex-grow flex flex-col h-full mt-24">
     	<?= $this->content() ?>		
   	</main>
 
