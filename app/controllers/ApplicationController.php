@@ -129,18 +129,22 @@ class ApplicationController extends Controller
             if (isset($_POST["task_status"]) && !empty($_POST["task_status"]) && $_POST["task_status"]!="All statuses") {
                 $taskFilter["task_status"] = $_POST["task_status"];
             }
+        
+            $taskModel = new TaskModel();
+            $tasksFounded = $taskModel->searchTasks($taskFilter);
+
+            if (isset($tasksFounded) && !empty($tasksFounded)) {
+                $this->view->results = $tasksFounded;
+            }
+            else{
+                $this->view->message = "No results found";
+                $this->view->txtColor = "text-red-500";
+            }  
         }
-
-        //echo "<br><br><br><br><br><br>";
-        //echo "FILTROS";
-        //var_dump($taskFilter);
-
-        $taskModel = new TaskModel();
-        $tasksFounded = $taskModel->searchTasks($taskFilter);
-        //echo "<br><br>";
-        //echo "ENCONTRADAS: ";
-        //var_dump($tasksFounded);
-        $this->view->results = $tasksFounded;
+        else{
+            $this->view->message = "No results found";
+            $this->view->txtColor = "text-red-500";
+        }
     }
 
 }
