@@ -18,5 +18,6 @@ $routes = array(
 	'/createTask'		=>  'application#createTask',
 	'/getViewPreDelete/:id' => 'application#getViewPreDelete',
 	'/deleteTask/:id' => 'application#deleteTask',
-	'/getsearchform'	=>  'application#getViewSearchForm'
+	'/getsearchform'	=>  'application#getViewSearchForm',
+	'/getsearchresults'	=>  'application#getSearchResults',
 );

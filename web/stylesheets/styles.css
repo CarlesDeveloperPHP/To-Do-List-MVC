@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Playpen';
-    /*src: url('http://localhost/To-Do-List-MVC/web/fonts/Playpen_Sans/static/PlaypenSans-Medium.ttf');*/
     src: url('../fonts/Playpen/static/PlaypenSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playpen_light';
+    src: url('../fonts/Playpen/static/PlaypenSans-Light.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -47,5 +53,10 @@ header {
 
 main {
     font-family: Playpen;
+}
+
+::placeholder {
+    font-size: 0.9rem;
+    font-family: Playpen_light;
 }
 
