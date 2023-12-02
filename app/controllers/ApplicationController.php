@@ -118,30 +118,29 @@ class ApplicationController extends Controller
         if (isset($_POST) && !empty($_POST)) {
             $taskFilter = [];
             if (isset($_POST["task_name"]) && !empty($_POST["task_name"])) {
-                $taskFilter["task_name"]=$_POST["task_name"];
+                $taskFilter["task_name"] = $_POST["task_name"];
             }
             if (isset($_POST["task_created_by"]) && !empty($_POST["task_created_by"])) {
-                $taskFilter["task_created_by"]=$_POST["task_created_by"];
+                $taskFilter["task_created_by"] = $_POST["task_created_by"];
             }
             if (isset($_POST["task_assigned_to"]) && !empty($_POST["task_assigned_to"])) {
-                $taskFilter["task_assigned_to"]=$_POST["task_assigned_to"];
+                $taskFilter["task_assigned_to"] = $_POST["task_assigned_to"];
             }
-            if (isset($_POST["task_status"]) && !empty($_POST["task_status"])) {
-                $taskFilter["task_status"]=$_POST["task_status"];
+            if (isset($_POST["task_status"]) && !empty($_POST["task_status"]) && $_POST["task_status"]!="All statuses") {
+                $taskFilter["task_status"] = $_POST["task_status"];
             }
         }
 
-        echo "<br><br><br><br><br><br>";
-        echo "FILTROS";
-        var_dump($taskFilter);
+        //echo "<br><br><br><br><br><br>";
+        //echo "FILTROS";
+        //var_dump($taskFilter);
 
         $taskModel = new TaskModel();
         $tasksFounded = $taskModel->searchTasks($taskFilter);
-        echo "<br><br>";
-        echo "ENCONTRADAS: ";
-        var_dump($tasksFounded);
-
-        //$this->view->results = $tasksFouded;
+        //echo "<br><br>";
+        //echo "ENCONTRADAS: ";
+        //var_dump($tasksFounded);
+        $this->view->results = $tasksFounded;
     }
 
 }

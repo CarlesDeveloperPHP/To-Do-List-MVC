@@ -93,43 +93,17 @@ class TaskModel
     {
         // Convert data json file into array     
         $tasks = $this->getAllTasks();
-        // Convert $taskFilter values to lower case
-        //$taskFilter = array_change_key_case($taskFilter, CASE_LOWER);
+        // filter $tasks array based on the conditions of the filter array 
         return array_filter($tasks, function ($task) use ($taskFilter) {
-            // Convert $task values to lower case
-            //$task = array_change_key_case($task, CASE_LOWER);
-            // Verificar cada campo del filtro
             foreach ($taskFilter as $key => $value) {
-                // Si el campo no está presente en el registro o los valores no coinciden, retornar false
-                if (!isset($task[$key]) || $task[$key] !== $value) {
+                if (!isset($task[$key]) || strtolower($task[$key]) !== strtolower($value)) {
                     return false;
                 }
             }
-            // Si todos los campos coinciden, retornar true
             return true;
-        });
-        
+        });        
     }
 
-
-
-/*
-    public function filter($tasks, $taskFilter)
-    {
-        return array_filter($tasks, function ($task) use ($taskFilter) {
-            // Verificar cada campo del filtro
-            foreach ($taskFilter as $key => $value) {
-                // Si el campo no está presente en el registro o los valores no coinciden, retornar false
-                if (!isset($task[$key]) || $task[$key] !== $value) {
-                    return false;
-                }
-            }
-            // Si todos los campos coinciden, retornar true
-            return true;
-        });
-        
-    }
-*/
 }
 
 ?>
