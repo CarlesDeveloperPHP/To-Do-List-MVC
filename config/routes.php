@@ -17,5 +17,7 @@ $routes = array(
 	'/getinsertform'	=>  'application#getViewInsertForm',
 	'/createTask'		=>  'application#createTask',
 	'/getViewPreDelete/:id' => 'application#getViewPreDelete',
-	'/deleteTask/:id' => 'application#deleteTask'
+	'/deleteTask/:id' => 'application#deleteTask',
+	'/editTask/:id' => 'application#editTask',
+
 );

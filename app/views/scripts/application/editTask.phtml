@@ -1,0 +1,60 @@
+
+<!-- This script is responsible for generating the creation form for a edit task -->
+
+<div class="flex my-auto">
+    <div class="w-3/5 mx-auto p-4">
+        <h2 class="text-2xl font-semibold text-center text-orange-400">EDIT TASK</h2>
+        <form action="createTask" method="post" class="text-orange-400" autocomplete="off">
+                            
+
+            <div class="mb-4 px-2">
+                <label for="task_name_id" class="block text-orange-600 font-medium">Task name:</label>
+                <input type="text" id="task_name_id" name="task_name" value="<?php echo $this->task_name; ?>" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+            </div>
+
+            <div class="mb-4 px-2">
+                <label for="task_details" class="block text-orange-600 font-medium">Task details:</label>
+
+                    <input id="task_details" name="task_details"   value="<?php echo $this->task_details; ?>" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500"></input>
+
+            </div>
+
+            <div class="flex mb-4">
+
+                <div class="w-1/3 px-2">
+                    <label for="task_creation_id" class="block text-orange-600 font-medium">Created by:</label>
+                    <input type="text" id="task_creation_id" name="task_created_by" required value="<?php echo $this->task_created_by; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500 ml-0">
+                </div>
+
+
+                <div class="w-1/3 px-2">
+                    <label for="task_assignation_id" class="block text-orange-600 font-medium">Task assigned to:</label>
+                    <input type="text" id="task_assignation_id" name="task_assigned_to" required value="<?php echo $this->task_assigned_to; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500" >
+                </div>
+
+                <div class="w-1/3 px-2">
+                    <label for="task_startDate_id" class="block text-orange-600 font-medium">Creation date:</label>
+                    <input type="date" id="task_startDate_id" name="task_startDate" required value="<?php echo $this->task_creation_date; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500" readonly>
+                </div>
+
+
+                <div class="w-1/3 px-2">
+                    <label for="task_deadline_id" class="block text-orange-600 font-medium">Deadline:</label>
+                    <input type="date" id="task_deadline_id" name="task_deadline" required value="<?php echo $this->task_deadline; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                </div>
+
+                <div class="w-1/3 px-2">
+                    <label for="task_status" class="block text-orange-600 font-medium">Status:</label>
+                    <input type="text" id="task_status" name="task_status" required value="<?php echo $this->task_status; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                </div>
+
+            </div>
+
+
+            <div class="flex justify-center">
+                <button type="submit" class="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-lime-500">Save task</button>
+            </div>
+
+        </form>
+    </div>
+</div>

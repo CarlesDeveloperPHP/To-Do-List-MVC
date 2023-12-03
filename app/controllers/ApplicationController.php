@@ -24,7 +24,28 @@ class ApplicationController extends Controller
 
     public function editTaskAction()
     {
-        echo "edit!!!!!!!"; 
+        {
+        // Getting the task_id
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        // Model call to get the taskData array that will be edited from the json file
+        $taskModel = new TaskModel();
+        $task = $taskModel->getTaskById($task_id);
+        if (isset($task) && is_array($task)) {
+            $this->view->task_id = $task["task_id"];
+            $this->view->task_name =  $task["task_name"];
+            $this->view->task_details =  $task["task_details"];
+            $this->view->task_created_by =  $task["task_created_by"];
+            $this->view->task_creation_date =  $task["task_creation_date"];
+            $this->view->task_assigned_to =  $task["task_assigned_to"];
+            $this->view->task_status =  $task["task_status"];
+            $this->view->task_deadline =  $task["task_deadline"];
+        } else {
+            $this->view->message = "No task available.";
+        }
+    
+
+        }
     }
 
 	public function getViewInsertFormAction()

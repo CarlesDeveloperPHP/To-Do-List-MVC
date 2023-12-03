@@ -11,11 +11,6 @@ class TaskModel
         $this->jsonPath = ROOT_PATH . '/db/dataBase.json';// donde está el JSON
     }
 
-    public function editTask()
-    {
-        echo "Here editTask function";
-    }
-
     public function getAllTasks()
     {
         // $data= file_get_contents('/..app/models/persistencia/DDBB.json') ;
@@ -88,6 +83,15 @@ class TaskModel
         }
 
     }
+
+    public function editTask($taskId, $updatedTask){
+
+
+        }
+
+    
+
+    
 
 }
 
