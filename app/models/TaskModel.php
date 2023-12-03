@@ -84,15 +84,33 @@ class TaskModel
 
     }
 
-    public function editTask($taskId, $updatedTask){
-
-
-        }
-
+    public function editTask($task_id, $updatedTask)
+    {
+    // Convert data json file into array     
+    $tasks = $this->getAllTasks();
     
+    // Get the index of the data corresponding to the task_id
+    $taskIndex = $this->getTaskIndexById($task_id);
 
-    
 
+        // Use the taskIndex to update the task
+        $tasks[$taskIndex] = array_merge($tasks[$taskIndex], $updatedTask);
+        
+        // Encode the array of Task objects back to JSON
+        $newJsonData = json_encode($tasks, JSON_PRETTY_PRINT);
+        
+        // Write the new content to the JSON file
+        file_put_contents('../db/dataBase.json', $newJsonData);
+
+
+    }
 }
+
+
+    
+
+    
+
+
 
 ?>

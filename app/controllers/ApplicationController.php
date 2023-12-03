@@ -22,7 +22,7 @@ class ApplicationController extends Controller
         return $allTasks;
     }	
 
-    public function editTaskAction()
+    public function showEditTaskAction()
     {
         {
         // Getting the task_id
@@ -47,6 +47,38 @@ class ApplicationController extends Controller
 
         }
     }
+
+    public function editTaskAction()
+    {
+        // Si se recibe una solicitud HTTP POST, recopila datos del formulario
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $task_id = $_POST["task_id"];
+            //echo $task_id;
+            // Array con los datos actualizados
+            $updatedTask = [
+               
+                "task_id"=> $_POST["task_id"],
+                "task_name" => $_POST["task_name"],
+                "task_details" => $_POST["task_details"],
+                "task_created_by" => $_POST["task_created_by"],
+                "task_creation_date" => $_POST["task_creation_date"],
+                "task_deadline" => $_POST["task_deadline"],
+                "task_assigned_to" => $_POST["task_assigned_to"],
+                "task_status" => $_POST["task_status"],
+                
+            ];
+
+            //var_dump($updatedTask);
+            //actualizar
+            $taskModel = new TaskModel();
+            $taskModel->editTask($task_id,$updatedTask);
+        }else{ echo "Hasta contrrolador";
+        }// esto no chuta pero nos debe devolver al get all tasks header("Location: ../To-Do-List-MVC/web/");
+        
+        header("Location: http://localhost/To-Do-List-MVC/web/");
+
+    }
+    
 
 	public function getViewInsertFormAction()
     {   
