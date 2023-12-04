@@ -11,14 +11,39 @@ class TaskModel
         $this->jsonPath = ROOT_PATH . '/db/dataBase.json';// donde está el JSON
     }
 
-    public function getAllTasks()
-    {
-        // $data= file_get_contents('/..app/models/persistencia/DDBB.json') ;
-        $jsonContent = file_get_contents($this->jsonPath);
-        // The second argument 'true' indicates that an associative array should be returned instead of an object.
-        $tasks = json_decode($jsonContent, true, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        return $tasks;
+public function getAllTasks()
+{
+    $jsonContent = file_get_contents($this->jsonPath);
+    $tasks = json_decode($jsonContent, true, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
+    // Calcula la diferencia de días y asigna el color correspondiente
+    foreach ($tasks as &$task) {
+        $daysRemaining = $this->calculateDaysRemaining($task['task_deadline']);
+        $task['color'] = $this->assignColor($daysRemaining);
     }
+
+    return $tasks;
+}
+
+private function calculateDaysRemaining($deadline)
+{
+    $deadlineDate = new DateTime($deadline);
+    $currentDate = new DateTime();
+    $difference = $currentDate->diff($deadlineDate);
+    return $difference->days;
+}
+
+private function assignColor($daysRemaining)
+{
+    if ($daysRemaining < 10) {
+        return 'green-200';
+    } elseif ($daysRemaining <= 10 && $daysRemaining > 5) {
+        return 'yellow-200';
+    } else {
+        return 'red-200';
+    }
+}
+
     
     public function createTask($newTaskData)
     {   
