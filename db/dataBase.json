@@ -1,7 +1,7 @@
 [
     {
         "task_id": "1",
-        "task_name": "la primera",
+        "task_name": "User authentication",
         "task_details": "Implement user authentication in MVC project.",
         "task_created_by": "John Smith",
         "task_creation_date": "2023-06-10",
