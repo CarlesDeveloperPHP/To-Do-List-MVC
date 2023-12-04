@@ -45,7 +45,9 @@ header {
     font-family: Rubik;
 }
 
-main {
-    font-family: Playpen;
+::placeholder {
+    font-size: 0.7rem;
+    font-family: Playpen_light;
+    font-style: italic;
 }
 
