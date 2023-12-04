@@ -68,14 +68,18 @@ class ApplicationController extends Controller
                 
             ];
 
-            //var_dump($updatedTask);
             //actualizar
             $taskModel = new TaskModel();
             $taskModel->editTask($task_id,$updatedTask);
-        }else{ echo "Hasta contrrolador";
-        }// esto no chuta pero nos debe devolver al get all tasks header("Location: ../To-Do-List-MVC/web/");
+            $this->view->message = "Task edited successfully!!";
+            $this->view->txtColor = "text-green-500";
+        }else{
+            // Error message;
+            $this->view->message = "Error: task could not be edited";
+            $this->view->txtColor = "text-red-500";
+        }
         
-        header("Location: http://localhost/To-Do-List-MVC/web/");
+        //header("Location: WEB_ROOT");
 
     }
     
@@ -158,6 +162,8 @@ class ApplicationController extends Controller
             $this->view->buttonText="Show all tasks";
             $this->view->txtColor = "text-lime-600";
         }
+
+
        
     }
 

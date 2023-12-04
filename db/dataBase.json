@@ -1,7 +1,7 @@
 [
     {
         "task_id": "1",
-        "task_name": "User authentication",
+        "task_name": "User authentication ",
         "task_details": "Implement user authentication in MVC project.",
         "task_created_by": "John Smith",
         "task_creation_date": "2023-06-10",
@@ -30,7 +30,7 @@
         "task_deadline": "2023-12-06",
         "task_assigned_to": "Ethan Taylor",
         "task_status": "In Progress",
-        "color": "yellow-200"
+        "color": "yellow-500"
     },
     {
         "task_id": "4",

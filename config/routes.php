@@ -19,6 +19,8 @@ $routes = array(
 	'/getViewPreDelete/:id' => 'application#getViewPreDelete',
 	'/deleteTask/:id' => 'application#deleteTask',
 	'/showEditTask/:id' => 'application#showEditTask',
-	'/showEditTask/editTask' => 'application#editTask'
+	'/showEditTask/editTask' => 'application#editTask',
+	'/showEditTask/WEB_ROOT' => 'application#getAllTasks'
+	
 
 );

@@ -135,8 +135,6 @@ private function assignColor($daysRemaining)
         
         // Write the new content to the JSON file
         file_put_contents('../db/dataBase.json', $newJsonData);
-
-
     }
 }
 
