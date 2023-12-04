@@ -29,17 +29,26 @@ private function calculateDaysRemaining($deadline)
 {
     $deadlineDate = new DateTime($deadline);
     $currentDate = new DateTime();
-    $difference = $currentDate->diff($deadlineDate);
-    return $difference->days;
+    if($deadlineDate < $currentDate ){
+        return null;
+    }else{
+        $difference = $currentDate->diff($deadlineDate);
+        return $difference->days; 
+    }
+
 }
 
 private function assignColor($daysRemaining)
 {
-    if ($daysRemaining < 10) {
-        return 'green-200';
-    } elseif ($daysRemaining <= 10 && $daysRemaining > 5) {
-        return 'yellow-200';
-    } else {
+    if($daysRemaining != null){
+        if ($daysRemaining > 10) {
+            return 'green-200';
+        } elseif ($daysRemaining <= 10 && $daysRemaining > 5) {
+            return 'yellow-200';
+        } elseif ($daysRemaining < 5 && $daysRemaining >= 1) {
+            return 'yellow-500';
+        }
+    }else{
         return 'red-200';
     }
 }
