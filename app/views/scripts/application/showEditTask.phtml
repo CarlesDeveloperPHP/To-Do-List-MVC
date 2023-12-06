@@ -48,7 +48,12 @@
 
                 <div class="w-1/3 px-2">
                     <label for="task_status" class="block text-orange-600 font-medium">Status:</label>
-                    <input type="text" id="task_status" name="task_status" required value="<?php echo $this->task_status; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                    <select name="task_status " required value="<?php echo $this->task_status; ?>"  class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                        <option><?php echo $this->task_status; ?></option>
+                        <option>Pending</option>
+                        <option>In Progress</option>
+                        <option>Completed</option>
+                    </select>    
                 </div>
 
             </div>

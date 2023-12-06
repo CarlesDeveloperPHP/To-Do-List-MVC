@@ -137,6 +137,9 @@ private function assignColor($daysRemaining)
         file_put_contents('../db/dataBase.json', $newJsonData);
     }
 
+    public function getAllTaskStatuses() {
+        return [EnumEstado::Pendinng, EnumEstado::In_Progress, EnumEstado::Completed];
+    }
     
 
 
