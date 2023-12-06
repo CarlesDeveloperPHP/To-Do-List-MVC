@@ -43,7 +43,7 @@
 
                 <div class="w-1/3 px-2">
                     <label for="task_deadline" class="block text-orange-600 font-medium">Deadline:</label>
-                    <input type="date" id="task_deadline" name="task_deadline" required value="<?php echo $this->task_deadline; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                    <input type="date" id="task_deadline" name="task_deadline" min="<?php echo $this->task_creation_date; ?>" required value="<?php echo $this->task_deadline; ?>" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
                 </div>
 
                 <div class="w-1/3 px-2">

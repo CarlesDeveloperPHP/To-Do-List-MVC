@@ -55,9 +55,12 @@ class ApplicationController extends Controller
         // Getting the task_id
         $parameters = $this->_namedParameters;
         $task_id = $parameters["id"];
+
+
         // Model call to get the taskData array that will be edited from the json file
         $taskModel = new TaskModel();
         $task = $taskModel->getTaskById($task_id);
+        
         if (isset($task) && is_array($task)) {
             $this->view->task_id = $task["task_id"];
             $this->view->task_name =  $task["task_name"];
@@ -80,7 +83,6 @@ class ApplicationController extends Controller
         // Si se recibe una solicitud HTTP POST, recopila datos del formulario
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $task_id = $_POST["task_id"];
-            //echo $task_id;
             // Array con los datos actualizados
             $updatedTask = [
                
@@ -104,10 +106,7 @@ class ApplicationController extends Controller
             // Error message;
             $this->view->message = "Error: task could not be edited";
             $this->view->txtColor = "text-red-500";
-        }
-        
-        //header("Location: WEB_ROOT");
-
+        }        
     }
     
 
