@@ -10,14 +10,41 @@
 
 class ApplicationController extends Controller 
 {
+
+    public function getAllTasksListAction()
+    {
+        $taskModel = new TaskModel();
+        $paginatorModel = new PaginatorModel();
+    
+        $tasksPerPage = 3;
+        if (isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        } else {
+            $page = 1;
+        }
+    
+        $allTasks = $taskModel->getAllTasks();
+    
+        $tasksToShow = $paginatorModel->getTasksByPage($allTasks, $page, $tasksPerPage);
+    
+        if (isset($tasksToShow) && count($tasksToShow) > 0) {
+            $totalPages = $paginatorModel->getTotalPages($allTasks, $tasksPerPage);
+    
+            $this->view->allTasks = $tasksToShow;
+            $this->view->currentPage = $page;
+            $this->view->totalPages = $totalPages;
+
+        } else {
+            $this->view->message = "No hay tareas en la lista.";  
+        }
+    }
+
     public function getAllTasksAction()
     {
     
         $allTasks = [];
 
-        $dataJson = new TaskModel();
-
-        $this->view->allTasks = $dataJson->getAllTasks();
+        $dataJson = new TaskModel();      
 
         return $allTasks;
     }	

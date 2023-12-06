@@ -1,16 +1,5 @@
 [
     {
-        "task_id": "1",
-        "task_name": "User authentication ",
-        "task_details": "Implement user authentication in MVC project.",
-        "task_created_by": "John Smith",
-        "task_creation_date": "2023-06-10",
-        "task_deadline": "2023-12-12",
-        "task_assigned_to": "David Johnson",
-        "task_status": "Pending",
-        "color": "yellow-200"
-    },
-    {
         "task_id": "2",
         "task_name": "Fix Bug in Controller",
         "task_details": "Debug and fix the issue in the MVC controller.",
@@ -27,10 +16,10 @@
         "task_details": "Improve database query performance for the MVC project.",
         "task_created_by": "Sophia Moore",
         "task_creation_date": "2023-10-05",
-        "task_deadline": "2023-12-06",
+        "task_deadline": "2023-12-08",
         "task_assigned_to": "Ethan Taylor",
         "task_status": "In Progress",
-        "color": "yellow-500"
+        "color": "red-200"
     },
     {
         "task_id": "4",
@@ -132,7 +121,7 @@
         "color": "red-200"
     },
     {
-        "task_id": 13,
+        "task_id": "13",
         "task_name": "Localization Support",
         "task_details": "Add localization support to the MVC application for multiple languages.",
         "task_created_by": "Aiden Davis",

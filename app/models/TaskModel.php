@@ -45,7 +45,7 @@ private function assignColor($daysRemaining)
             return 'green-200';
         } elseif ($daysRemaining <= 10 && $daysRemaining > 5) {
             return 'yellow-200';
-        } elseif ($daysRemaining < 5 && $daysRemaining >= 1) {
+        } elseif ($daysRemaining <= 5 && $daysRemaining >= 1) {
             return 'yellow-500';
         }
     }else{
@@ -136,6 +136,10 @@ private function assignColor($daysRemaining)
         // Write the new content to the JSON file
         file_put_contents('../db/dataBase.json', $newJsonData);
     }
+
+    
+
+
 }
 
 

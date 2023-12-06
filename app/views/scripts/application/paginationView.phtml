@@ -1,0 +1,27 @@
+
+<div class="pagination mt-4 text-right mb-3">
+    <?php
+    $backOnePage = $this->currentPage - 1;
+    $nextPage = $this->currentPage + 1;
+
+    if($this->currentPage != 1){
+        echo '<a href="?page=1'  . '" class="mx-2 ' . '">' . "|<< " . '</a>';
+        echo '<a href="?page='. $backOnePage  . '" class="mx-2 ' . '">' . "< " . '</a>';
+    }
+
+    for ($i = 1; $i <= $this->totalPages; $i++) {
+        $color = '';
+        if ( $i === $this->currentPage) {
+            $color ='font-bold text-orange-600';
+        }  else{
+            $color ='';
+        } 
+        echo '<a href="?page=' . $i . '" class="mx-2 ' . $color . '">' . $i . '</a>';
+    }
+    if($this->currentPage != $this->totalPages){
+        echo '<a href="?page='. $nextPage  . '" class="mx-2 '  . '">' . "> " . '</a>';
+        echo '<a href="?page='. $this->totalPages . '" class="mx-2 '. '">' . ">>| " . '</a>';
+    }
+
+    ?>
+</div>
