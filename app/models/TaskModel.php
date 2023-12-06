@@ -19,7 +19,7 @@ public function getAllTasks()
     // Calcula la diferencia de días y asigna el color correspondiente
     foreach ($tasks as &$task) {
         $daysRemaining = $this->calculateDaysRemaining($task['task_deadline']);
-        $task['color'] = $this->assignColor($daysRemaining);
+        $task['color'] = $this->assignColor($daysRemaining,$task['task_status']);
     }
 
     return $tasks;
@@ -38,10 +38,10 @@ private function calculateDaysRemaining($deadline)
 
 }
 
-private function assignColor($daysRemaining)
+private function assignColor($daysRemaining,$status)
 {
     if($daysRemaining != null){
-        if ($daysRemaining > 10) {
+        if ($daysRemaining > 10 || $status == "Completed") {
             return 'green-200';
         } elseif ($daysRemaining <= 10 && $daysRemaining > 5) {
             return 'yellow-200';

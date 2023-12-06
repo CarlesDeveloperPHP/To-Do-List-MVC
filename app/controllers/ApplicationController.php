@@ -93,7 +93,7 @@ class ApplicationController extends Controller
                 "task_creation_date" => $_POST["task_creation_date"],
                 "task_deadline" => $_POST["task_deadline"],
                 "task_assigned_to" => $_POST["task_assigned_to"],
-                "task_status" => $_POST["task_status"],
+                "task_status" => $_POST["task_status"]
                 
             ];
 

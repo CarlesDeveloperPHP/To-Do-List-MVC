@@ -8,7 +8,7 @@
         "task_deadline": "2024-03-13",
         "task_assigned_to": "Brian Wilson",
         "task_status": "Completed",
-        "color": "red-200"
+        "color": "green-200"
     },
     {
         "task_id": "3",
@@ -18,8 +18,8 @@
         "task_creation_date": "2023-10-05",
         "task_deadline": "2023-12-08",
         "task_assigned_to": "Ethan Taylor",
-        "task_status": "In Progress",
-        "color": "yellow-500"
+        "task_status": "Pending",
+        "color": "green-200"
     },
     {
         "task_id": "4",
@@ -29,7 +29,7 @@
         "task_creation_date": "2023-05-12",
         "task_deadline": "2023-12-05",
         "task_assigned_to": "Olivia Brown",
-        "task_status": "Pending",
+        "task_status": null,
         "color": "red-200"
     },
     {
