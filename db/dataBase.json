@@ -19,7 +19,7 @@
         "task_deadline": "2023-12-08",
         "task_assigned_to": "Ethan Taylor",
         "task_status": "Pending",
-        "color": "green-200"
+        "color": "yellow-500"
     },
     {
         "task_id": "4",
@@ -29,7 +29,7 @@
         "task_creation_date": "2023-05-12",
         "task_deadline": "2023-12-05",
         "task_assigned_to": "Olivia Brown",
-        "task_status": null,
+        "task_status": "Pending",
         "color": "red-200"
     },
     {

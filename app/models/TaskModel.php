@@ -8,7 +8,7 @@ class TaskModel
 
     public function __construct()
     {
-        $this->jsonPath = ROOT_PATH . '/db/dataBase.json';// donde está el JSON
+        $this->jsonPath = ROOT_PATH . '/db/dataBase.json';
     }
 
 public function getAllTasks()
@@ -16,7 +16,7 @@ public function getAllTasks()
     $jsonContent = file_get_contents($this->jsonPath);
     $tasks = json_decode($jsonContent, true, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
-    // Calcula la diferencia de días y asigna el color correspondiente
+    // Calculate the day difference and assign the corresponding color.
     foreach ($tasks as &$task) {
         $daysRemaining = $this->calculateDaysRemaining($task['task_deadline']);
         $task['color'] = $this->assignColor($daysRemaining,$task['task_status']);

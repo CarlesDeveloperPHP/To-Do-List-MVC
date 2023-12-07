@@ -35,7 +35,7 @@ class ApplicationController extends Controller
             $this->view->totalPages = $totalPages;
 
         } else {
-            $this->view->message = "No hay tareas en la lista.";  
+            $this->view->message = "No tasks to display.";  
         }
     }
 
@@ -80,12 +80,10 @@ class ApplicationController extends Controller
 
     public function editTaskAction()
     {
-        // Si se recibe una solicitud HTTP POST, recopila datos del formulario
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $task_id = $_POST["task_id"];
-            // Array con los datos actualizados
-            $updatedTask = [
-               
+    
+            $updatedTask = [               
                 "task_id"=> $_POST["task_id"],
                 "task_name" => $_POST["task_name"],
                 "task_details" => $_POST["task_details"],
@@ -96,8 +94,7 @@ class ApplicationController extends Controller
                 "task_status" => $_POST["task_status"]
                 
             ];
-
-            //actualizar
+            // Update
             $taskModel = new TaskModel();
             $taskModel->editTask($task_id,$updatedTask);
             $this->view->message = "Task edited successfully!!";
