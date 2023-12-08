@@ -9,22 +9,20 @@
 //require_once "../app/models/TaskModel.php";
 
 class ApplicationController extends Controller 
-{
-
+{    
     public function getAllTasksListAction()
     {
         $taskModel = new TaskModel();
-        $paginatorModel = new PaginatorModel();
-    
+        $paginatorModel = new PaginatorModel();    
         $tasksPerPage = 3;
+
         if (isset($_GET['page'])) {
             $page = intval($_GET['page']);
         } else {
             $page = 1;
         }
     
-        $allTasks = $taskModel->getAllTasks();
-    
+        $allTasks = $taskModel->getAllTasks();    
         $tasksToShow = $paginatorModel->getTasksByPage($allTasks, $page, $tasksPerPage);
     
         if (isset($tasksToShow) && count($tasksToShow) > 0) {
@@ -39,24 +37,11 @@ class ApplicationController extends Controller
         }
     }
 
-    public function getAllTasksAction()
-    {
-    
-        $allTasks = [];
-
-        $dataJson = new TaskModel();      
-
-        return $allTasks;
-    }	
-
     public function showEditTaskAction()
-    {
-        {
+    {       
         // Getting the task_id
         $parameters = $this->_namedParameters;
         $task_id = $parameters["id"];
-
-
         // Model call to get the taskData array that will be edited from the json file
         $taskModel = new TaskModel();
         $task = $taskModel->getTaskById($task_id);
@@ -72,10 +57,7 @@ class ApplicationController extends Controller
             $this->view->task_deadline =  $task["task_deadline"];
         } else {
             $this->view->message = "No task available.";
-        }
-    
-
-        }
+        }       
     }
 
     public function editTaskAction()
@@ -92,7 +74,6 @@ class ApplicationController extends Controller
                 "task_deadline" => $_POST["task_deadline"],
                 "task_assigned_to" => $_POST["task_assigned_to"],
                 "task_status" => $_POST["task_status"]
-                
             ];
             // Update
             $taskModel = new TaskModel();
@@ -104,8 +85,7 @@ class ApplicationController extends Controller
             $this->view->message = "Error: task could not be edited";
             $this->view->txtColor = "text-red-500";
         }        
-    }
-    
+    }        
 
 	public function getViewInsertFormAction()
     {   
@@ -184,10 +164,6 @@ class ApplicationController extends Controller
             $this->view->message = "The task has been deleted successfully";
             $this->view->buttonText="Show all tasks";
             $this->view->txtColor = "text-lime-600";
-        }
-
-
-       
+        }       
     }
-
 }

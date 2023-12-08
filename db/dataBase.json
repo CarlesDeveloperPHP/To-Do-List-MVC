@@ -2,13 +2,12 @@
     {
         "task_id": "2",
         "task_name": "Fix Bug in Controller",
-        "task_details": "Debug and fix the issue in the MVC controller.",
+        "task_details": "Debug and fix the issue in the MVC controller. ",
         "task_created_by": "Emma Davis",
         "task_creation_date": "2023-07-22",
         "task_deadline": "2024-03-13",
         "task_assigned_to": "Brian Wilson",
-        "task_status": "Completed",
-        "color": "green-200"
+        "task_status": "Completed"
     },
     {
         "task_id": "3",
@@ -18,8 +17,7 @@
         "task_creation_date": "2023-10-05",
         "task_deadline": "2023-12-08",
         "task_assigned_to": "Ethan Taylor",
-        "task_status": "Pending",
-        "color": "yellow-500"
+        "task_status": "Pending"
     },
     {
         "task_id": "4",
@@ -29,8 +27,7 @@
         "task_creation_date": "2023-05-12",
         "task_deadline": "2023-12-05",
         "task_assigned_to": "Olivia Brown",
-        "task_status": "Pending",
-        "color": "red-200"
+        "task_status": "Pending"
     },
     {
         "task_id": 5,
@@ -40,8 +37,7 @@
         "task_creation_date": "2023-03-20",
         "task_deadline": "2023-04-15",
         "task_assigned_to": "Noah Miller",
-        "task_status": "Completed",
-        "color": "red-200"
+        "task_status": "Completed"
     },
     {
         "task_id": 6,
@@ -51,8 +47,7 @@
         "task_creation_date": "2023-09-02",
         "task_deadline": "2023-09-20",
         "task_assigned_to": "Ava Turner",
-        "task_status": "In Progress",
-        "color": "red-200"
+        "task_status": "In Progress"
     },
     {
         "task_id": 7,
@@ -62,8 +57,7 @@
         "task_creation_date": "2023-01-10",
         "task_deadline": "2023-01-31",
         "task_assigned_to": "Jackson Smith",
-        "task_status": "Pending",
-        "color": "red-200"
+        "task_status": "Pending"
     },
     {
         "task_id": 8,
@@ -73,8 +67,7 @@
         "task_creation_date": "2023-06-28",
         "task_deadline": "2023-07-15",
         "task_assigned_to": "Ella Martin",
-        "task_status": "Completed",
-        "color": "red-200"
+        "task_status": "Completed"
     },
     {
         "task_id": 9,
@@ -84,8 +77,7 @@
         "task_creation_date": "2023-04-18",
         "task_deadline": "2023-05-10",
         "task_assigned_to": "Logan Davis",
-        "task_status": "In Progress",
-        "color": "red-200"
+        "task_status": "In Progress"
     },
     {
         "task_id": 10,
@@ -95,8 +87,7 @@
         "task_creation_date": "2023-11-20",
         "task_deadline": "2023-12-15",
         "task_assigned_to": "Aria Wilson",
-        "task_status": "Pending",
-        "color": "yellow-200"
+        "task_status": "Pending"
     },
     {
         "task_id": 11,
@@ -106,8 +97,7 @@
         "task_creation_date": "2023-02-08",
         "task_deadline": "2023-03-01",
         "task_assigned_to": "Evelyn Robinson",
-        "task_status": "Completed",
-        "color": "red-200"
+        "task_status": "Completed"
     },
     {
         "task_id": 12,
@@ -117,8 +107,7 @@
         "task_creation_date": "2023-08-02",
         "task_deadline": "2023-08-20",
         "task_assigned_to": "Sophie Taylor",
-        "task_status": "In Progress",
-        "color": "red-200"
+        "task_status": "In Progress"
     },
     {
         "task_id": "13",
@@ -128,8 +117,7 @@
         "task_creation_date": "2023-07-10",
         "task_deadline": "2023-07-31",
         "task_assigned_to": "Lily Harris",
-        "task_status": "Pending",
-        "color": "red-200"
+        "task_status": "Pending"
     },
     {
         "task_id": 14,
@@ -139,8 +127,7 @@
         "task_creation_date": "2023-05-25",
         "task_deadline": "2023-06-10",
         "task_assigned_to": "Mila Robinson",
-        "task_status": "Completed",
-        "color": "red-200"
+        "task_status": "Completed"
     },
     {
         "task_id": 15,
@@ -150,8 +137,7 @@
         "task_creation_date": "2023-10-12",
         "task_deadline": "2023-11-01",
         "task_assigned_to": "James Martin",
-        "task_status": "In Progress",
-        "color": "red-200"
+        "task_status": "In Progress"
     },
     {
         "task_id": 16,
@@ -161,8 +147,7 @@
         "task_creation_date": "2023-03-15",
         "task_deadline": "2023-04-05",
         "task_assigned_to": "Ethan Robinson",
-        "task_status": "Pending",
-        "color": "red-200"
+        "task_status": "Pending"
     },
     {
         "task_id": 17,
@@ -172,8 +157,7 @@
         "task_creation_date": "2023-09-18",
         "task_deadline": "2023-10-10",
         "task_assigned_to": "Ella Harris",
-        "task_status": "Completed",
-        "color": "red-200"
+        "task_status": "Completed"
     },
     {
         "task_id": 18,
@@ -183,8 +167,7 @@
         "task_creation_date": "2023-06-05",
         "task_deadline": "2023-06-25",
         "task_assigned_to": "Ava Wilson",
-        "task_status": "In Progress",
-        "color": "red-200"
+        "task_status": "In Progress"
     },
     {
         "task_id": 19,
@@ -194,8 +177,7 @@
         "task_creation_date": "2023-01-28",
         "task_deadline": "2023-02-15",
         "task_assigned_to": "Logan Harris",
-        "task_status": "Pending",
-        "color": "red-200"
+        "task_status": "Pending"
     },
     {
         "task_id": 20,
@@ -205,8 +187,7 @@
         "task_creation_date": "2023-04-05",
         "task_deadline": "2023-04-25",
         "task_assigned_to": "Sophie Robinson",
-        "task_status": "Completed",
-        "color": "red-200"
+        "task_status": "Completed"
     },
     {
         "task_id": "656c83fae3e2b",
@@ -216,7 +197,6 @@
         "task_creation_date": "2023-12-03",
         "task_deadline": "2023-12-20",
         "task_assigned_to": "sdf",
-        "task_status": "Pending",
-        "color": "green-200"
+        "task_status": "Pending"
     }
 ]

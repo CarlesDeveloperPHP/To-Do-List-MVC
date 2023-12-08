@@ -1,12 +1,10 @@
 <?php
 
-
 class PaginatorModel
 {
     public function getTasksByPage($allTasks, $page, $tasksPerPage)
     {
-        $startIndex = ($page - 1) * $tasksPerPage;
-        $endIndex = $startIndex + $tasksPerPage;
+        $startIndex = ($page - 1) * $tasksPerPage;    
 
         return array_slice($allTasks, $startIndex, $tasksPerPage);
     }

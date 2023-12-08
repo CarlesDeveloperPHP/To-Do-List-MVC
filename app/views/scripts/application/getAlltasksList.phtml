@@ -1,69 +1,57 @@
 <?php
 $allTasks = $this->allTasks;
+//var_dump($allTasks);
 
 if (isset($allTasks)) : ?>
 
 <div class="w-2/3 mx-auto">
-<div class="w-full text-center mt-4">
-    <div>
-        <?php include('paginationView.phtml'); ?>
-    </div>
-    <?php foreach ($allTasks as $task) :
-        $shortenedText = isset($task['task_details']) ? substr($task['task_details'], 0, 20) : '';
-        $color = isset($task['color']) ? $task['color'] : 'black'; 
-    ?>
-
-    <div class="border border-black rounded-md p-2 mb-2">
-        <div class="flex mb-2">
-
-            <div class="w-1/5 ml-2 bg-orange-200 rounded-md p-1 text-center">
-                <label class="font-bold">Created by</label><br>
-                <div class="bg-white rounded-md">
-                    <label class="w-full"><?php echo " " . ($task['task_created_by']); ?></label><br>
-                    <label class="w-full bg-white"><?php echo " " . ($task['task_creation_date']); ?></label>
+    <div class="w-full text-center mt-4">
+        <div>
+            <?php include('paginationView.phtml'); ?>
+        </div>
+        <?php foreach ($allTasks as $task) :
+            $shortenedText = isset($task['task_details']) ? substr($task['task_details'], 0, 20) : '';
+            $color = isset($task['color']) ? $task['color'] : 'black';  ?>    
+        <div class="border border-black rounded-md p-2 mb-2">
+            <div class="flex mb-2">
+                <div class="w-1/5 ml-2 bg-orange-200 rounded-md p-1 text-center">
+                    <label class="font-bold">Created by</label><br>
+                    <div class="bg-white rounded-md">
+                        <label class="w-full"><?php echo " " . ($task['task_created_by']); ?></label><br>
+                        <label class="w-full bg-white"><?php echo " " . ($task['task_creation_date']); ?></label>
+                    </div>
+                </div>
+                <div class="w-3/5 ml-2">
+                    <h1 class="block w-full text-center font-bold text-orange-400 text-2x1"><?php echo strtoupper($task['task_name']); ?></h1>
+                    <br><label class="w-2/5 text-center "><strong>Deadline:</strong> <?php echo($task['task_deadline']); ?></label>
+                </div>
+                <div class="w-1/5 ml-2 bg-<?php echo $color; ?> rounded-md p-1 text-center">
+                    <div class="ml-2 ">
+                        <label>Assigned to</label><br>
+                        <label class="block w-full font-bold text-orange-700"><?php echo " " . ($task['task_assigned_to']); ?></label>
+                        <input class="block w-full text-center bg-<?php echo $color; ?>" value="<?php echo($task['task_status']); ?>" readonly></input>
+                    </div>                
                 </div>
             </div>
-
-            <div class="w-3/5 ml-2">
-                <h1 class="block w-full text-center font-bold text-orange-400 text-2x1"><?php echo strtoupper($task['task_name']); ?></h1>
-                <br><label class="w-2/5 text-center "><strong>Deadline:</strong> <?php echo($task['task_deadline']); ?></label>
-            </div>
-
-            <div class="w-1/5 ml-2 bg-<?php echo $color; ?> rounded-md p-1 text-center">
-                <div class="ml-2 ">
-                    <label>Assigned to</label><br>
-                    <label class="block w-full font-bold text-orange-700"><?php echo " " . ($task['task_assigned_to']); ?></label>
-                    <input class="block w-full text-center bg-<?php echo $color; ?>" value="<?php echo($task['task_status']); ?>" readonly></input>
+            <div class="flex mb-2 ml-2">
+                <label class="border border-gray-300 rounded-md p-2 block w-[24%] "><?php echo $shortenedText . "..."; ?></label>
+                <div class="flex ml-10 ">
+                    <button class="text-blue-500 ml-[1%] text-lg scale-100" onclick="toggleModal('task-<?php echo $task['task_id']; ?>')"><i class="fas fa-eye"></i></button>
+                    <button id="task_id" class="text-green-500 ml-[50%] text-lg scale-125"><a href="<?php echo WEB_ROOT . "/showEditTask/" . $task['task_id']; ?>"><i class="fas fa-edit"></i></button>
+                    <button class="text-red-500 ml-[75%] text-lg scale-125"><a href="<?php echo WEB_ROOT . "/getViewPreDelete/" . $task['task_id']; ?>"><i class="fas fa-trash"></i></a></button>
                 </div>
-                
             </div>
         </div>
-        <div class="flex mb-2 ml-2">
-            <label class="border border-gray-300 rounded-md p-2 block w-[24%] "><?php echo $shortenedText . "..."; ?></label>
-            <div class="flex ml-10 ">
-                <button class="text-blue-500 ml-[1%] text-lg scale-100" onclick="toggleModal('task-<?php echo $task['task_id']; ?>')"><i class="fas fa-eye"></i></button>
-                <button id="task_id" class="text-green-500 ml-[50%] text-lg scale-125"><a href="<?php echo WEB_ROOT . "/showEditTask/" . $task['task_id']; ?>"><i class="fas fa-edit"></i></button>
-                <button class="text-red-500 ml-[75%] text-lg scale-125"><a href="<?php echo WEB_ROOT . "/getViewPreDelete/" . $task['task_id']; ?>"><i class="fas fa-trash"></i></a></button>
 
+            <!-- Modal  -->
+            <div id="task-<?php echo $task['task_id']; ?>" class="modal hidden fixed inset-0 overflow-y-auto z-50">
+                <?php include('modalShowOneTask.php'); ?>
             </div>
-        </div>
+            <!-- End modal -->
+            <?php endforeach; ?>
+    <?php else : ?>
+        <p>No tasks to display.</p>
+    <?php endif; ?>
     </div>
-
-<!-- Modal  -->
-<div id="task-<?php echo $task['task_id']; ?>" class="modal hidden fixed inset-0 overflow-y-auto z-50">
-    <?php include('modalShowOneTask.php'); ?>
-</div>
-<!-- Fin del modal -->
-
-    <?php endforeach; ?>
-
-    
-
-<?php else : ?>
-    <p>No hay tareas en la lista.</p>
-<?php endif; ?>
 </div>
 
-<script>
-
-</script>
