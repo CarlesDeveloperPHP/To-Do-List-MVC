@@ -9,16 +9,16 @@
             <!-- ID: -->
             <!-- Auto-assigned data in createTaskAction method -->
                             
-            <!-- Title -->
+            <!-- Task name -->
             <div class="mb-4 px-2">
                 <label for="task_name_id" class="block text-orange-600 font-medium">Task name:</label>
-                <input type="text" id="task_name_id" name="task_name" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                <input type="text" id="task_name_id" name="task_name" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500 maxlength="30" placeholder="Mandatory field (max 30 characters)">
             </div>
 
-            <!-- Text -->
+            <!-- Task details -->
             <div class="mb-4 px-2">
                 <label for="task_details_id" class="block text-orange-600 font-medium">Task details:</label>
-                <textarea id="task_details_id" name="task_details" rows="2" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500"></textarea>
+                <textarea id="task_details_id" name="task_details" rows="1" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500" maxlength="200" placeholder="Optional field: here you can explain the task details (max 200 characters)"></textarea>
             </div>
 
             <div class="flex mb-4">
@@ -26,13 +26,13 @@
                 <!-- Created By -->
                 <div class="w-1/3 px-2">
                     <label for="task_creation_id" class="block text-orange-600 font-medium">Created by:</label>
-                    <input type="text" id="task_creation_id" name="task_created_by" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500 ml-0">
+                    <input type="text" id="task_creation_id" name="task_created_by" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500 ml-0" maxlength="20" placeholder="Mandatory field (max 20 characters)">
                 </div>
 
                 <!-- Task assignation -->
                 <div class="w-1/3 px-2">
                     <label for="task_assignation_id" class="block text-orange-600 font-medium">Task assigned to:</label>
-                    <input type="text" id="task_assignation_id" name="task_assigned_to" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500">
+                    <input type="text" id="task_assignation_id" name="task_assigned_to" required class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-orange-500" maxlength="20" placeholder="Mandatory field (max 20 characters)">
                 </div>
 
                 <!-- Start date -->
