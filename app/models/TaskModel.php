@@ -142,7 +142,7 @@ class TaskModel
         });        
     }
 
-}
+
     public function editTask($task_id, $updatedTask)
     {
     // Convert data json file into array     
