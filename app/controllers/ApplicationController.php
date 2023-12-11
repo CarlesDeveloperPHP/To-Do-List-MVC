@@ -168,4 +168,44 @@ class ApplicationController extends Controller
             $this->view->txtColor = "text-lime-600";
         }       
     }
+
+    public function getViewSearchFormAction()
+    {
+    }
+
+    public function getSearchResultsAction()
+    {
+        // Set taskFilter array to search tasks acording to this conditions
+        if (isset($_POST) && !empty($_POST)) {
+            $taskFilter = [];
+            if (isset($_POST["task_name"]) && !empty($_POST["task_name"])) {
+                $taskFilter["task_name"] = $_POST["task_name"];
+            }
+            if (isset($_POST["task_created_by"]) && !empty($_POST["task_created_by"])) {
+                $taskFilter["task_created_by"] = $_POST["task_created_by"];
+            }
+            if (isset($_POST["task_assigned_to"]) && !empty($_POST["task_assigned_to"])) {
+                $taskFilter["task_assigned_to"] = $_POST["task_assigned_to"];
+            }
+            if (isset($_POST["task_status"]) && !empty($_POST["task_status"]) && $_POST["task_status"]!="All statuses") {
+                $taskFilter["task_status"] = $_POST["task_status"];
+            }
+        
+            $taskModel = new TaskModel();
+            $tasksFounded = $taskModel->searchTasks($taskFilter);
+
+            if (isset($tasksFounded) && !empty($tasksFounded)) {
+                $this->view->results = $tasksFounded;
+            }
+            else{
+                $this->view->message = "No results found";
+                $this->view->txtColor = "text-red-500";
+            }  
+        }
+        else{
+            $this->view->message = "No results found";
+            $this->view->txtColor = "text-red-500";
+        }
+    }
+
 }

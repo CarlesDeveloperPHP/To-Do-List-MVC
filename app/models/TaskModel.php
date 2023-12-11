@@ -127,6 +127,22 @@ class TaskModel
 
     }
 
+    public function searchTasks($taskFilter)
+    {
+        // Convert data json file into array     
+        $tasks = $this->getAllTasks();
+        // filter $tasks array based on the conditions of the filter array 
+        return array_filter($tasks, function ($task) use ($taskFilter) {
+            foreach ($taskFilter as $key => $value) {
+                if (!isset($task[$key]) || strtolower($task[$key]) !== strtolower($value)) {
+                    return false;
+                }
+            }
+            return true;
+        });        
+    }
+
+}
     public function editTask($task_id, $updatedTask)
     {
     // Convert data json file into array     
