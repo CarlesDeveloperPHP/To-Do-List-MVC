@@ -9,23 +9,85 @@
 //require_once "../app/models/TaskModel.php";
 
 class ApplicationController extends Controller 
-{
-    public function getAllTasksAction()
-    {
+{    
     
-        $allTasks = [];
 
-        $dataJson = new TaskModel();
+    public function getAllTasksListAction()
+    {
+        $taskModel = new TaskModel();
+        $paginatorModel = new PaginatorModel();    
+        $tasksPerPage = 3;
 
-        $this->view->allTasks = $dataJson->getAllTasks();
+        if (isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        } else {
+            $page = 1;
+        }
+    
+        $allTasks = $taskModel->getAllTasks();    
+        $tasksToShow = $paginatorModel->getTasksByPage($allTasks, $page, $tasksPerPage);
+    
+        if (isset($tasksToShow) && count($tasksToShow) > 0) {
+            $totalPages = $paginatorModel->getTotalPages($allTasks, $tasksPerPage);
+    
+            $this->view->allTasks = $tasksToShow;
+            $this->view->currentPage = $page;
+            $this->view->totalPages = $totalPages;
 
-        //return $allTasks;
-    }	
+        } else {
+            $this->view->message = "No tasks to display.";  
+        }
+    }
+
+    public function showEditTaskAction()
+    {       
+        // Getting the task_id
+        $parameters = $this->_namedParameters;
+        $task_id = $parameters["id"];
+        // Model call to get the taskData array that will be edited from the json file
+        $taskModel = new TaskModel();
+        $task = $taskModel->getTaskById($task_id);
+        
+        if (isset($task) && is_array($task)) {
+            $this->view->task_id = $task["task_id"];
+            $this->view->task_name =  $task["task_name"];
+            $this->view->task_details =  $task["task_details"];
+            $this->view->task_created_by =  $task["task_created_by"];
+            $this->view->task_creation_date =  $task["task_creation_date"];
+            $this->view->task_assigned_to =  $task["task_assigned_to"];
+            $this->view->task_status =  $task["task_status"];
+            $this->view->task_deadline =  $task["task_deadline"];
+        } else {
+            $this->view->message = "No task available.";
+        }       
+    }
 
     public function editTaskAction()
     {
-        echo "edit!!!!!!!"; 
-    }
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $task_id = $_POST["task_id"];
+    
+            $updatedTask = [               
+                "task_id"=> $_POST["task_id"],
+                "task_name" => $_POST["task_name"],
+                "task_details" => $_POST["task_details"],
+                "task_created_by" => $_POST["task_created_by"],
+                "task_creation_date" => $_POST["task_creation_date"],
+                "task_deadline" => $_POST["task_deadline"],
+                "task_assigned_to" => $_POST["task_assigned_to"],
+                "task_status" => $_POST["task_status"]
+            ];
+            // Update
+            $taskModel = new TaskModel();
+            $taskModel->editTask($task_id,$updatedTask);
+            $this->view->message = "Task edited successfully!!";
+            $this->view->txtColor = "text-green-500";
+        }else{
+            // Error message;
+            $this->view->message = "Error: task could not be edited";
+            $this->view->txtColor = "text-red-500";
+        }        
+    }        
 
 	public function getViewInsertFormAction()
     {   
@@ -104,8 +166,7 @@ class ApplicationController extends Controller
             $this->view->message = "The task has been deleted successfully";
             $this->view->buttonText="Show all tasks";
             $this->view->txtColor = "text-lime-600";
-        }
-       
+        }       
     }
 
     public function getViewSearchFormAction()

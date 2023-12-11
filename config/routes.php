@@ -12,12 +12,17 @@
  */
 $routes = array(
 	'/test' => 'test#index',
-	'/'				=>  'application#getAllTasks',
-	'/getAllTasks'  =>	'application#getAllTasks',
+	'/'				=>  'application#getAllTasksList',
+	'/getAllTasksList'  =>	'application#getAllTasksList',
 	'/getinsertform'	=>  'application#getViewInsertForm',
 	'/createTask'		=>  'application#createTask',
 	'/getViewPreDelete/:id' => 'application#getViewPreDelete',
-	'/deleteTask/:id' => 'application#deleteTask',
 	'/getsearchform'	=>  'application#getViewSearchForm',
 	'/getsearchresults'	=>  'application#getSearchResults',
+	'/deleteTask/:id' => 'application#deleteTask',
+	'/showEditTask/:id' => 'application#showEditTask',
+	'/showEditTask/editTask' => 'application#editTask',
+	
+	
+
 );
