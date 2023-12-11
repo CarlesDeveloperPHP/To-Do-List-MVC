@@ -1,18 +1,19 @@
 <?php 
 
-    $results = $this->results;
+    $allTasks = $this->allTasks;
+    //var_dump(($alltasks));
 
-    if (isset($results)) : ?>
+    if (isset($allTasks)) : ?>
 
         <div class="w-2/3 mx-auto">
             <div class="w-full text-center mt-4">
-                <!-- <div>
+                <div>
                     <?php include('paginationView.phtml'); ?>
-                </div> -->
+                </div> 
                 <div class="w-full text-center mt-2">
                     <h2 class="text-2xl font-semibold text-center text-orange-400 mb-6">SEARCH RESULTS LIST</h2>
                 </div>
-                <?php foreach ($results as $task) :
+                <?php foreach ($allTasks as $task) :
                     $shortenedText = isset($task['task_details']) ? substr($task['task_details'], 0, 20) : '';
                     $color = isset($task['color']) ? $task['color'] : 'black'; 
                 ?>
@@ -59,7 +60,7 @@
                 <?php endforeach; ?>
 
             <?php else : ?>
-                <p>No hay tareas en la lista.</p>
+                <p>No hay tareas en la lista de busqueda.</p>
             <?php endif; ?>
 
             </div>

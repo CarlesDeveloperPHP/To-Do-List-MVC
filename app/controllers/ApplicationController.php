@@ -175,6 +175,15 @@ class ApplicationController extends Controller
 
     public function getSearchResultsAction()
     {
+        
+        $paginatorModel = new PaginatorModel();    
+        $tasksPerPage = 3;
+
+        if (isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        } else {
+            $page = 1;
+        }
         // Set taskFilter array to search tasks acording to this conditions
         if (isset($_POST) && !empty($_POST)) {
             $taskFilter = [];
@@ -193,9 +202,23 @@ class ApplicationController extends Controller
         
             $taskModel = new TaskModel();
             $tasksFounded = $taskModel->searchTasks($taskFilter);
+            $allTasks = $taskModel->getAllTasks();    
+            $tasksToShow = $paginatorModel->getTasksByPage($tasksFounded, $page, $tasksPerPage);
+
+            if (isset($tasksToShow) && count($tasksToShow) > 0) {
+                $totalPages = $paginatorModel->getTotalPages($tasksFounded, $tasksPerPage);
+            
+                $this->view->allTasks = $tasksToShow;
+                $this->view->currentPage = $page;
+                $this->view->totalPages = $totalPages;
+            
+            } else {
+                $this->view->message = "No tasks to display.";  
+            }
+            
 
             if (isset($tasksFounded) && !empty($tasksFounded)) {
-                $this->view->results = $tasksFounded;
+                $this->view->allTasks = $tasksFounded;
             }
             else{
                 $this->view->message = "No results found";
