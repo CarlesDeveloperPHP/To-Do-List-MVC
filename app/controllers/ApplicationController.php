@@ -6,12 +6,10 @@
  */
 
 // The class TaskModel file doesn't need to be imported due to the autoloader
-//require_once "../app/models/TaskModel.php";
 
 class ApplicationController extends Controller 
 {    
     
-
     public function getAllTasksListAction()
     {
         $taskModel = new TaskModel();
