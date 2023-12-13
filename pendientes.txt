@@ -1,0 +1,16 @@
+
+Ponerle el nombre en inglés correcto al rachivo JSON. Dudo de persintencia ;)
+
+el link de telwin borrar de mi rama
+borrare mi rama para que salga todo ok.
+mirar de hacer la lista en divs
+rama de header y otra de footer
+
+divs bonitos en vez de lista
+diferencia entre uri y URL
+que pasa con los acentos!! que se ven mal!
+
+//para ruben
+Ponerle el nombre en inglés correcto al rachivo JSON. Dudo de persintencia ;)
+la bbdd la colocamos como en os vídeos o donde creemos mas lógico
+vale la pena un modal y es factible?

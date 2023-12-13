@@ -10,5 +10,27 @@
  * '/calendar' => 'calendar#index'
  */
 $routes = array(
-	'/test' => 'test#index'
+	
+	//Create
+	'/getinsertform'		=>  'application#getViewInsertForm',
+	'/createTask'			=>  'application#createTask',
+	//Read
+	'/'						=>  'application#getAllTasksList',
+	'/getAllTasksList'  	=>	'application#getAllTasksList',
+	//Update
+	'/showEditTask/:id'		=> 'application#showEditTask',
+	'/showEditTask/editTask'=> 'application#editTask',
+	//Delete
+	'/deleteTask/:id' 		=> 'application#deleteTask',
+	'/getViewPreDelete/:id' => 'application#getViewPreDelete',
+	// Search
+	'/getsearchform'		=>  'application#getViewSearchForm',
+	'/getsearchresults'		=>  'application#getSearchResults',
+	//Test
+	'/test' 				=> 'test#index'
+	
+
+	
+	
+
 );

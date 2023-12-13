@@ -4,8 +4,50 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TO DO LIST</title>
+	<link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/stylesheets/styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/javascripts/functions.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
 </head>
-<body>
-	<?php echo $this->content(); ?>
+
+<body class="min-h-screen flex flex-col ">
+
+	<header class="bg-orange-500 p-1 flex items-center justify-center w-full fixed top-0 z-50">
+		<!-- Title -->
+		<div class="flex-shrink-0 mr-10">
+			<a href="<?php echo WEB_ROOT?>">
+				<img src="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/images/todolisticon.png" alt="todolist_icon" class="w-15 h-13">
+			</a>
+		</div>
+		<!-- Navigation -->
+		<div class="w-2/7 p-2 ml-10 flex justify-end items-center text-sm">
+			<!-- Create task -->
+    		<a href="<?php echo WEB_ROOT . "/getinsertform"?>" class="mx-2 bg-lime-300 hover:bg-lime-400 py-2 px-4 rounded"><button>CREATE TASK</button></a>
+    		<!-- Search TASK -->
+			<a href="<?php echo WEB_ROOT . "/getsearchform"?>" class="mx-2 bg-lime-300 hover:bg-lime-400 py-2 px-4 rounded"><button>SEARCH TASK</button></a>
+		</div>
+	</header>
+
+	<main class="flex-grow flex flex-col h-full mt-24">
+    	<?= $this->content() ?>		
+  	</main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
+        <p class="text-white mt-2">App created by</p>
+        <div class="flex items-center justify-center mt-2">
+            <a href="https://www.linkedin.com/in/carles-ruiz-montejo-tecnico-de-campo-especialista" class="flex items-center text-white text-lg mx-5">
+                <img src="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/images/linkedin.png" alt="Enlace 1 Icon" class="w-6 h-6 mr-2">
+                Carles Ruiz
+            </a>
+            <a href="https://www.linkedin.com/in/agonzalezar" class="flex items-center text-white text-lg mx-5">
+                <img src="http://<?php echo $_SERVER['HTTP_HOST']."/".WEB_ROOT?>/images/linkedin.png" alt="Enlace 2 Icon" class="w-6 h-6 mr-2">
+                Antonio González
+            </a>
+        </div>
+    </footer>
+
+
 </body>
 </html>
