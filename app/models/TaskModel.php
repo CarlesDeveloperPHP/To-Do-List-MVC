@@ -2,7 +2,6 @@
 
 class TaskModel
 {
-
     protected $tasks = [];
     protected $jsonPath;
 
@@ -124,7 +123,6 @@ class TaskModel
         } else {
             return false;
         }
-
     }
 
     public function searchTasks($taskFilter)
@@ -161,12 +159,5 @@ class TaskModel
     file_put_contents('../db/dataBase.json', $newJsonData);
     }
 }
-
-
-    
-
-    
-
-
 
 ?>
