@@ -6,7 +6,7 @@
         "task_created_by": "Emma Davis",
         "task_creation_date": "2023-07-22",
         "task_deadline": "2024-03-13",
-        "task_assigned_to": "Brian Wilson",
+        "task_assigned_to": "Sophie Robinson",
         "task_status": "Completed"
     },
     {
@@ -23,7 +23,7 @@
         "task_id": "4",
         "task_name": "Refactor View Components",
         "task_details": "Refactor and optimize view components in the MVC project.",
-        "task_created_by": "Aiden Turner",
+        "task_created_by": "Sophia Moore",
         "task_creation_date": "2023-05-12",
         "task_deadline": "2023-12-05",
         "task_assigned_to": "Olivia Brown",
@@ -33,10 +33,10 @@
         "task_id": 5,
         "task_name": "Implement New Feature",
         "task_details": "Add a new feature to the MVC project according to specifications.",
-        "task_created_by": "Mia Robinson",
+        "task_created_by": "Emma Davis",
         "task_creation_date": "2023-03-20",
         "task_deadline": "2023-04-15",
-        "task_assigned_to": "Noah Miller",
+        "task_assigned_to": "Ethan Taylor",
         "task_status": "Completed"
     },
     {
@@ -53,17 +53,17 @@
         "task_id": 7,
         "task_name": "Write Documentation",
         "task_details": "Create comprehensive documentation for the MVC project.",
-        "task_created_by": "Harper Harris",
+        "task_created_by": "Emma Davis",
         "task_creation_date": "2023-01-10",
         "task_deadline": "2023-01-31",
-        "task_assigned_to": "Jackson Smith",
+        "task_assigned_to": "Ethan Taylor",
         "task_status": "Pending"
     },
     {
         "task_id": 8,
         "task_name": "Code Review",
         "task_details": "Perform a thorough code review for the MVC project.",
-        "task_created_by": "Lucas Lewis",
+        "task_created_by": "Sophia Moore",
         "task_creation_date": "2023-06-28",
         "task_deadline": "2023-07-15",
         "task_assigned_to": "Ella Martin",
@@ -156,7 +156,7 @@
         "task_created_by": "Liam Davis",
         "task_creation_date": "2023-09-18",
         "task_deadline": "2023-10-10",
-        "task_assigned_to": "Ella Harris",
+        "task_assigned_to": "Sophie Robinson",
         "task_status": "Completed"
     },
     {
@@ -183,20 +183,10 @@
         "task_id": 20,
         "task_name": "Feature Enhancement",
         "task_details": "Enhance existing features of the MVC application based on user feedback.",
-        "task_created_by": "Elijah Turner",
+        "task_created_by": "Sophia Moore",
         "task_creation_date": "2023-04-05",
         "task_deadline": "2023-04-25",
         "task_assigned_to": "Sophie Robinson",
         "task_status": "Completed"
-    },
-    {
-        "task_id": "656c83fae3e2b",
-        "task_name": "edfsd",
-        "task_details": "sdf",
-        "task_created_by": "sdf",
-        "task_creation_date": "2023-12-03",
-        "task_deadline": "2023-12-20",
-        "task_assigned_to": "sdf",
-        "task_status": "Pending"
     }
 ]

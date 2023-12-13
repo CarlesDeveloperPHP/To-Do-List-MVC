@@ -8,20 +8,28 @@
  * 
  * '/' => 'index#index',
  * '/calendar' => 'calendar#index'
- * '/getViewPreDelete/(?P<task_id>[0-9]+)/(?P<task_name>[a-zA-Z]+)' => 'application#getViewPreDelete',
  */
 $routes = array(
-	'/test' => 'test#index',
-	'/'				=>  'application#getAllTasksList',
-	'/getAllTasksList'  =>	'application#getAllTasksList',
-	'/getinsertform'	=>  'application#getViewInsertForm',
-	'/createTask'		=>  'application#createTask',
+	
+	//Create
+	'/getinsertform'		=>  'application#getViewInsertForm',
+	'/createTask'			=>  'application#createTask',
+	//Read
+	'/'						=>  'application#getAllTasksList',
+	'/getAllTasksList'  	=>	'application#getAllTasksList',
+	//Update
+	'/showEditTask/:id'		=> 'application#showEditTask',
+	'/showEditTask/editTask'=> 'application#editTask',
+	//Delete
+	'/deleteTask/:id' 		=> 'application#deleteTask',
 	'/getViewPreDelete/:id' => 'application#getViewPreDelete',
-	'/getsearchform'	=>  'application#getViewSearchForm',
-	'/getsearchresults'	=>  'application#getSearchResults',
-	'/deleteTask/:id' => 'application#deleteTask',
-	'/showEditTask/:id' => 'application#showEditTask',
-	'/showEditTask/editTask' => 'application#editTask',
+	// Search
+	'/getsearchform'		=>  'application#getViewSearchForm',
+	'/getsearchresults'		=>  'application#getSearchResults',
+	//Test
+	'/test' 				=> 'test#index'
+	
+
 	
 	
 
